@@ -8,7 +8,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Edge Within">
 <meta property="og:title" content="Podcast production · I bring the studio to you">
-<meta property="og:description" content="4K cameras, lighting and mics on site. Edit, 5 clips, thumbnail and upload done for you. Pilot episode A$2,500. Northern Rivers, NSW.">
+<meta property="og:description" content="4K cameras, lighting and mics on site. Edit, 5 clips, episode thumbnail and upload done for you. Pilot episode A$2,500. Northern Rivers, NSW.">
 <meta property="og:image" content="https://edgewithinproductions.com/og-image.jpg?v=2">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -16,7 +16,7 @@
 <meta property="og:url" content="https://edgewithinproductions.com/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Podcast production · I bring the studio to you">
-<meta name="twitter:description" content="4K cameras, lighting and mics on site. Edit, 5 clips, thumbnail and upload done for you. Northern Rivers, NSW.">
+<meta name="twitter:description" content="4K cameras, lighting and mics on site. Edit, 5 clips, episode thumbnail and upload done for you. Northern Rivers, NSW.">
 <meta name="twitter:image" content="https://edgewithinproductions.com/og-image.jpg?v=2">
 <link rel="canonical" href="https://edgewithinproductions.com/">
 <link rel="icon" href="favicon.ico?v=4" sizes="any">
@@ -353,23 +353,12 @@
   }
   .card-link:hover { text-decoration: underline; }
 
-  .phase-strip {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
-    margin: 0 auto 32px; max-width: 920px; position: relative;
-  }
-  .phase-strip::before {
-    content: ''; position: absolute; top: 19px; left: 12.5%; right: 12.5%;
-    height: 1px; background: var(--grey3); z-index: 0;
-  }
-  .phase-step { text-align: center; position: relative; z-index: 1; padding: 0 8px; }
   .phase-num {
     width: 38px; height: 38px; border-radius: 50%; background: var(--card2);
     border: 2px solid var(--gold); color: var(--gold);
     font-family: 'Courier New', monospace; font-size: 14px; font-weight: 700;
     display: flex; align-items: center; justify-content: center; margin: 0 auto 12px;
   }
-  .phase-name { font-family: Arial, sans-serif; font-size: 13.5px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
-  .phase-desc { font-family: Arial, sans-serif; font-size: 12px; color: var(--grey); line-height: 1.5; }
 
   /* "What you get" timeline: 4 numbered steps joined by a gold line (vertical on mobile) */
   .timeline {
@@ -886,8 +875,6 @@
     .proof-strip { grid-template-columns: 1fr; text-align: center; }
     .founding-callout { grid-template-columns: 1fr; text-align: center; gap: 14px; max-width: 420px; padding: 22px 20px; }
     .founding-callout .btn-secondary { justify-self: center; white-space: normal; }
-    .phase-strip { grid-template-columns: 1fr 1fr; row-gap: 28px; }
-    .phase-strip::before { display: none; }
     .timeline { grid-template-columns: 1fr; gap: 14px; max-width: 560px; }
     .timeline::before { display: none; }
     .tl-step { flex-direction: row; align-items: flex-start; gap: 14px; }
@@ -1149,7 +1136,7 @@
       <div class="compare-row" role="row">
         <div class="compare-label" role="rowheader">What you get</div>
         <div class="compare-studio" role="cell">Footage and edits, priced item by item</div>
-        <div class="compare-ew" role="cell">The whole episode: edit, 5 clips, thumbnail, titles, chapters and upload</div>
+        <div class="compare-ew" role="cell">The whole episode: edit, 5 clips, episode thumbnail, titles, chapters and upload</div>
       </div>
       <div class="compare-row" role="row">
         <div class="compare-label" role="rowheader">Proof it works</div>
@@ -1166,29 +1153,6 @@
     <div class="eyebrow">On the day</div>
     <h2>How a shoot works.</h2>
     <p>One person, one kit, one standard.</p>
-  </div>
-
-  <div class="phase-strip">
-    <div class="phase-step">
-      <div class="phase-num">1</div>
-      <div class="phase-name">Prep</div>
-      <div class="phase-desc">Prompts and location</div>
-    </div>
-    <div class="phase-step">
-      <div class="phase-num">2</div>
-      <div class="phase-name">Record</div>
-      <div class="phase-desc">4K, light, premium mics</div>
-    </div>
-    <div class="phase-step">
-      <div class="phase-num">3</div>
-      <div class="phase-name">Edit</div>
-      <div class="phase-desc">Grade, clips, titles</div>
-    </div>
-    <div class="phase-step">
-      <div class="phase-num">4</div>
-      <div class="phase-name">Deliver</div>
-      <div class="phase-desc">Upload and go live</div>
-    </div>
   </div>
 
   <div class="included-box included-box-single">
@@ -1232,7 +1196,7 @@
       <div class="tl-card">
         <div class="tl-when">Next</div>
         <h3>Clips</h3>
-        <p>Hook-first short clips from your best moments, plus a custom thumbnail.</p>
+        <p>Hook-first short clips from your best moments.</p>
       </div>
     </li>
     <li class="tl-step tl-step--launch">
@@ -1240,7 +1204,7 @@
       <div class="tl-card">
         <div class="tl-when">Within <span data-turnaround>7</span> days</div>
         <h3>Launch</h3>
-        <p>Titles, description and chapters written. Ready to publish.</p>
+        <p>Titles, description, chapters and a custom episode thumbnail. Ready to publish.</p>
       </div>
     </li>
   </ol>
@@ -1251,7 +1215,7 @@
       <ul>
         <li>Long-form edit with colour grading (multicam)</li>
         <li>5 hook-first short-form clips</li>
-        <li>Custom thumbnail</li>
+        <li>Custom episode thumbnail for Spotify and YouTube</li>
         <li>Two rounds of revisions</li>
         <li>Titles, descriptions, chapters</li>
         <li>Upload to Spotify, Apple Podcasts, and YouTube once you approve</li>
@@ -1262,7 +1226,7 @@
       <h3>Hook-first clips</h3>
       <p>Every clip is picked from the strongest, most shareable moments of your episode. Never chosen at random.</p>
       <p>Each one opens on the line that makes people stop scrolling, so your best ideas reach new people.</p>
-      <p class="included-note">Episode, clips and thumbnail delivered within <span data-turnaround>7</span> days of recording.</p>
+      <p class="included-note">Full episode, clips and custom episode thumbnail delivered within <span data-turnaround>7</span> days of recording.</p>
     </div>
   </div>
   <p class="included-note" style="text-align:center; max-width:620px; margin:20px auto 0;">
@@ -1282,7 +1246,8 @@
       <ul>
         <li>Travel to location and outdoor shoot</li>
         <li>Optional breathwork and guidance before recording</li>
-        <li>Long-form edit, 5-6 clips, custom thumbnail</li>
+        <li>Long-form edit and 5-6 clips</li>
+        <li>Custom episode thumbnail</li>
         <li>Titles, descriptions, and chapters</li>
         <li>Show set up on Spotify and Apple Podcasts</li>
       </ul>
@@ -1307,7 +1272,8 @@
         <div class="tier-total">1 episode · A$2,500 total</div>
         <ul class="tier-list">
           <li>Full production cycle, end to end</li>
-          <li>5 hook-first clips + custom thumbnail</li>
+          <li>5 hook-first clips</li>
+          <li>Custom episode thumbnail for Spotify and YouTube</li>
           <li>Upload to Spotify, Apple, YouTube on approval</li>
           <li>Test the fit before committing further</li>
         </ul>
@@ -1322,7 +1288,8 @@
         <div class="tier-total">A$6,600 total · save A$900 vs pilot</div>
         <ul class="tier-list">
           <li>Full cycle for each of 3 episodes</li>
-          <li>5 hook-first clips + custom thumbnail every episode</li>
+          <li>5 hook-first clips per episode</li>
+          <li>Custom episode thumbnail for Spotify and YouTube</li>
           <li>A$300 off per episode</li>
           <li>Enough runway to find your rhythm</li>
           <li>Batch-record when schedules align</li>
@@ -1339,7 +1306,8 @@
         <div class="tier-total">A$12,000 total · 20% less than pilot</div>
         <ul class="tier-list">
           <li>Full cycle for each of 6 episodes</li>
-          <li>5 hook-first clips + custom thumbnail every episode</li>
+          <li>5 hook-first clips per episode</li>
+          <li>Custom episode thumbnail for Spotify and YouTube</li>
           <li>A$500 off per episode vs pilot</li>
           <li>Best rate for a serious content engine</li>
           <li>Priority scheduling and batch days</li>
@@ -1479,7 +1447,7 @@
     </div>
     <div class="faq-item">
       <button type="button" class="faq-q" aria-expanded="false">How do the package prices work?</button>
-      <div class="faq-a">Pilot is A$2,500 for one episode. Series is 3 episodes at A$2,200 each (A$6,600). Season is 6 episodes at A$2,000 each (A$12,000). Same deliverables every time, including 5 hook-first clips and a custom thumbnail per episode. You pay per episode as work completes, not the whole pack up front. Custom counts are priced off the nearest tier. Add-ons are extra: extra clips are A$50 each, cinematic clips A$75, and new show setup on Spotify and Apple Podcasts is A$250 one-off.</div>
+      <div class="faq-a">Pilot is A$2,500 for one episode. Series is 3 episodes at A$2,200 each (A$6,600). Season is 6 episodes at A$2,000 each (A$12,000). Same deliverables every time, including 5 hook-first clips and a custom episode thumbnail for Spotify and YouTube. You pay per episode as work completes, not the whole pack up front. Custom counts are priced off the nearest tier. Add-ons are extra: extra clips are A$50 each, cinematic clips A$75, and new show setup on Spotify and Apple Podcasts is A$250 one-off.</div>
     </div>
     <div class="faq-item">
       <button type="button" class="faq-q" aria-expanded="false">What if I want 4, 5, or 8 episodes?</button>
@@ -1499,7 +1467,7 @@
     </div>
     <div class="faq-item">
       <button type="button" class="faq-q" aria-expanded="false">How fast is turnaround?</button>
-      <div class="faq-a">Your edited episode, clips and thumbnail are delivered within <span data-turnaround>7</span> days of recording. Revisions typically take 2-3 business days per round.</div>
+      <div class="faq-a">Your edited episode, clips and custom episode thumbnail are delivered within <span data-turnaround>7</span> days of recording. Revisions typically take 2-3 business days per round.</div>
     </div>
     <div class="faq-item">
       <button type="button" class="faq-q" aria-expanded="false">Is breathwork required?</button>
