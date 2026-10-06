@@ -371,6 +371,47 @@
   .phase-name { font-family: Arial, sans-serif; font-size: 13.5px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
   .phase-desc { font-family: Arial, sans-serif; font-size: 12px; color: var(--grey); line-height: 1.5; }
 
+  /* "What you get" timeline: 4 numbered steps joined by a gold line (vertical on mobile) */
+  .timeline {
+    list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
+    max-width: 1000px; margin: 0 auto 28px; position: relative;
+  }
+  .timeline::before {
+    content: ''; position: absolute; top: 19px; left: 12.5%; right: 12.5%;
+    height: 1px; background: rgba(184,134,11,0.45); z-index: 0;
+  }
+  .tl-step { position: relative; z-index: 1; display: flex; flex-direction: column; min-width: 0; }
+  .tl-step .phase-num { margin: 0 auto 14px; flex-shrink: 0; }
+  .tl-card {
+    flex: 1; background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px 18px; text-align: left;
+  }
+  .tl-step--launch .tl-card { border-color: var(--gold); background: var(--card2); }
+  .tl-when {
+    font-family: 'Courier New', monospace; font-size: 10px; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px;
+  }
+  .tl-card h3 {
+    font-family: Arial, sans-serif; font-size: 15px; font-weight: 700;
+    color: var(--white); margin-bottom: 8px;
+  }
+  .tl-card p {
+    font-family: Arial, sans-serif; font-size: 13.5px; color: var(--grey); line-height: 1.6;
+    overflow-wrap: break-word;
+  }
+  .included-box p {
+    font-family: Arial, sans-serif; font-size: 13.5px; color: var(--grey); line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  .included-box p:last-child { margin-bottom: 0; }
+  .included-box--gold { border-color: var(--gold); background: var(--card2); }
+  .included-box--gold h3 { color: var(--gold); }
+  .hero-promise {
+    font-family: Arial, sans-serif; font-size: 14px; color: #cfcfcf; line-height: 1.6;
+    max-width: 640px; width: 100%;
+  }
+  .hero-promise strong { color: var(--gold); }
+
   .included-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -487,6 +528,20 @@
   .value-note strong { color: var(--gold); }
   .value-note a { color: var(--gold); font-weight: 700; text-decoration: none; }
   .value-note a:hover { text-decoration: underline; }
+
+  .monthly-card {
+    max-width: 640px; margin: 0 auto 12px;
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    padding: 14px 16px 14px 20px; border-radius: 8px;
+    background: rgba(0,0,0,0.25); border: 1px solid rgba(184,134,11,0.35);
+  }
+  .monthly-card p { font-family: Arial, sans-serif; font-size: 13.5px; color: #b0b0b0; line-height: 1.5; }
+  .monthly-card p strong { color: var(--white); }
+  .monthly-card .btn-secondary {
+    white-space: nowrap; color: var(--gold); border-color: rgba(184,134,11,0.6);
+    padding: 10px 18px; font-size: 12px;
+  }
+  .monthly-card .btn-secondary:hover { color: var(--white); border-color: var(--gold); }
 
   .founding-callout {
     max-width: 1000px; margin: 8px auto 20px;
@@ -833,6 +888,16 @@
     .founding-callout .btn-secondary { justify-self: center; white-space: normal; }
     .phase-strip { grid-template-columns: 1fr 1fr; row-gap: 28px; }
     .phase-strip::before { display: none; }
+    .timeline { grid-template-columns: 1fr; gap: 14px; max-width: 560px; }
+    .timeline::before { display: none; }
+    .tl-step { flex-direction: row; align-items: flex-start; gap: 14px; }
+    .tl-step:not(:last-child)::after {
+      content: ''; position: absolute; left: 19px; top: 38px; bottom: -14px;
+      width: 1px; background: rgba(184,134,11,0.45);
+    }
+    .tl-step .phase-num { margin: 0; }
+    .monthly-card { flex-direction: column; text-align: center; max-width: 420px; padding: 16px; gap: 12px; }
+    .monthly-card .btn-secondary { white-space: normal; }
   }
   @media (max-width: 860px) {
     .compare-row {
@@ -943,6 +1008,7 @@
       I can offer question ideas and prompts if you'd like them, guide the conversation on the day,
       then edit the episode, cut the clips and get it live.
     </p>
+    <p class="hero-promise"><strong>Your episode and clips, delivered within <span data-turnaround>7</span> days of recording.</strong></p>
     <div class="hero-btns">
       <a href="https://calendly.com/mjdaavenport/podcast-production-chat" target="_blank" rel="noopener" data-booking-link class="btn-primary">Book a call</a>
       <a href="#pricing" class="btn-secondary">See packages</a>
@@ -1137,23 +1203,67 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="what-you-get">
   <div class="section-header center">
-    <div class="eyebrow">After the shoot</div>
-    <h2>What you get, every episode.</h2>
+    <div class="eyebrow">What you get</div>
+    <h2>From record day to <em>ready to publish</em>.</h2>
+    <p>Your full episode and clips, delivered within <span data-turnaround>7</span> days of recording.</p>
   </div>
 
-  <div class="included-box included-box-single">
+  <ol class="timeline">
+    <li class="tl-step">
+      <div class="phase-num" aria-hidden="true">1</div>
+      <div class="tl-card">
+        <div class="tl-when">On the day</div>
+        <h3>Record day</h3>
+        <p>I guide the conversation so you can relax into it. Want question ideas or prompts? I can offer those too.</p>
+      </div>
+    </li>
+    <li class="tl-step">
+      <div class="phase-num" aria-hidden="true">2</div>
+      <div class="tl-card">
+        <div class="tl-when">Next</div>
+        <h3>Edit</h3>
+        <p>Your full episode, edited multicam and colour graded.</p>
+      </div>
+    </li>
+    <li class="tl-step">
+      <div class="phase-num" aria-hidden="true">3</div>
+      <div class="tl-card">
+        <div class="tl-when">Next</div>
+        <h3>Clips</h3>
+        <p>Hook-first short clips from your best moments, plus a custom thumbnail.</p>
+      </div>
+    </li>
+    <li class="tl-step tl-step--launch">
+      <div class="phase-num" aria-hidden="true">4</div>
+      <div class="tl-card">
+        <div class="tl-when">Within <span data-turnaround>7</span> days</div>
+        <h3>Launch</h3>
+        <p>Titles, description and chapters written. Ready to publish.</p>
+      </div>
+    </li>
+  </ol>
+
+  <div class="included-grid">
+    <div class="included-box">
       <h3>Every episode includes</h3>
       <ul>
         <li>Long-form edit with colour grading (multicam)</li>
-        <li>5 short-form clips + custom thumbnail</li>
+        <li>5 hook-first short-form clips</li>
+        <li>Custom thumbnail</li>
         <li>Two rounds of revisions</li>
         <li>Titles, descriptions, chapters</li>
         <li>Upload to Spotify, Apple Podcasts, and YouTube once you approve</li>
         <li>You own the content</li>
       </ul>
-      <p class="included-note">Typical turnaround: long-form review in 7-10 business days, clips within 5 business days of approval.</p>
+    </div>
+    <div class="included-box included-box--gold">
+      <h3>Hook-first clips</h3>
+      <p>Every clip is picked from the strongest, most shareable moments of your episode. Never chosen at random.</p>
+      <p>Each one opens on the line that makes people stop scrolling, so your best ideas reach new people.</p>
+      <p class="included-note">Episode, clips and thumbnail delivered within <span data-turnaround>7</span> days of recording.</p>
+    </div>
   </div>
   <p class="included-note" style="text-align:center; max-width:620px; margin:20px auto 0;">
     Not in a podcast package: <a href="#addons" style="color:var(--gold); text-decoration:none; font-weight:600;">see add-ons</a> for extras, plus unlimited revisions.
@@ -1197,7 +1307,7 @@
         <div class="tier-total">1 episode · A$2,500 total</div>
         <ul class="tier-list">
           <li>Full production cycle, end to end</li>
-          <li>5 short-form clips + thumbnail</li>
+          <li>5 hook-first clips + custom thumbnail</li>
           <li>Upload to Spotify, Apple, YouTube on approval</li>
           <li>Test the fit before committing further</li>
         </ul>
@@ -1212,6 +1322,7 @@
         <div class="tier-total">A$6,600 total · save A$900 vs pilot</div>
         <ul class="tier-list">
           <li>Full cycle for each of 3 episodes</li>
+          <li>5 hook-first clips + custom thumbnail every episode</li>
           <li>A$300 off per episode</li>
           <li>Enough runway to find your rhythm</li>
           <li>Batch-record when schedules align</li>
@@ -1228,6 +1339,7 @@
         <div class="tier-total">A$12,000 total · 20% less than pilot</div>
         <ul class="tier-list">
           <li>Full cycle for each of 6 episodes</li>
+          <li>5 hook-first clips + custom thumbnail every episode</li>
           <li>A$500 off per episode vs pilot</li>
           <li>Best rate for a serious content engine</li>
           <li>Priority scheduling and batch days</li>
@@ -1238,6 +1350,10 @@
       </div>
     </div>
 
+    <div class="monthly-card">
+      <p><strong>Monthly plans available.</strong> Ask about rates.</p>
+      <a href="https://calendly.com/mjdaavenport/podcast-production-chat" target="_blank" rel="noopener" data-booking-link class="btn-secondary">Book a call</a>
+    </div>
     <p class="value-note">
       <strong>Custom packages available.</strong> Need a different episode count or something tailored? <a href="#inquire">Enquire on the form</a> or <a href="https://calendly.com/mjdaavenport/podcast-production-chat" target="_blank" rel="noopener" data-booking-link>book a call</a>.
     </p>
@@ -1363,11 +1479,11 @@
     </div>
     <div class="faq-item">
       <button type="button" class="faq-q" aria-expanded="false">How do the package prices work?</button>
-      <div class="faq-a">Pilot is A$2,500 for one episode. Series is 3 episodes at A$2,200 each (A$6,600). Season is 6 episodes at A$2,000 each (A$12,000). Same deliverables every time, including 5 short-form clips per episode. You pay per episode as work completes, not the whole pack up front. Custom counts are priced off the nearest tier. Add-ons are extra: extra clips are A$50 each, cinematic clips A$75, and new show setup on Spotify and Apple Podcasts is A$250 one-off.</div>
+      <div class="faq-a">Pilot is A$2,500 for one episode. Series is 3 episodes at A$2,200 each (A$6,600). Season is 6 episodes at A$2,000 each (A$12,000). Same deliverables every time, including 5 hook-first clips and a custom thumbnail per episode. You pay per episode as work completes, not the whole pack up front. Custom counts are priced off the nearest tier. Add-ons are extra: extra clips are A$50 each, cinematic clips A$75, and new show setup on Spotify and Apple Podcasts is A$250 one-off.</div>
     </div>
     <div class="faq-item">
       <button type="button" class="faq-q" aria-expanded="false">What if I want 4, 5, or 8 episodes?</button>
-      <div class="faq-a">I price off the nearest tier. 4 episodes typically sit at the Series rate (A$2,200). 8 or ongoing monthly can sit at or near the Season rate (from A$2,000). Tell me the count and I confirm in my reply.</div>
+      <div class="faq-a">I price off the nearest tier. 4 episodes typically sit at the Series rate (A$2,200). 8 episodes can sit at or near the Season rate (from A$2,000). Monthly plans are available too, so ask about rates. Tell me the count and I confirm in my reply.</div>
     </div>
     <div class="faq-item">
       <button type="button" class="faq-q" aria-expanded="false">Do I have to film the whole pack at once?</button>
@@ -1383,7 +1499,7 @@
     </div>
     <div class="faq-item">
       <button type="button" class="faq-q" aria-expanded="false">How fast is turnaround?</button>
-      <div class="faq-a">Long-form for review within 7-10 business days after recording. First drafts of the clips within 5 business days after you approve the long-form. Revisions typically 2-3 business days per round.</div>
+      <div class="faq-a">Your edited episode, clips and thumbnail are delivered within <span data-turnaround>7</span> days of recording. Revisions typically take 2-3 business days per round.</div>
     </div>
     <div class="faq-item">
       <button type="button" class="faq-q" aria-expanded="false">Is breathwork required?</button>
@@ -1441,6 +1557,12 @@
       a.rel = 'noopener';
     });
   }
+
+  // Turnaround: the delivery promise, in days. Every spot on the page that shows it is a
+  // <span data-turnaround> with the number written in (the no-JS fallback). To change it,
+  // update TURNAROUND_DAYS here and the numbers inside those spans (search: data-turnaround).
+  const TURNAROUND_DAYS = '7';
+  document.querySelectorAll('[data-turnaround]').forEach(el => { el.textContent = TURNAROUND_DAYS; });
 
   // Showreel: swap the thumbnail for the real YouTube player on click
   document.querySelectorAll('.yt-facade').forEach(el => {
