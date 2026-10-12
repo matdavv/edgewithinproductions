@@ -971,9 +971,6 @@
     padding-top: 92px;
   }
   .hero-copy { gap: 14px; }
-  .hero-logo { align-items: center; margin-bottom: 4px; }
-  .hero-logo .wm-word { font-size: 44px; }
-  .hero-logo .wm-sub { font-size: 11px; margin-top: 6px; }
   .hero-sub { color: #d6d6d6; }
   .hero-proof {
     font-family: 'Courier New', monospace; font-size: 12px; letter-spacing: 0.08em;
@@ -1008,8 +1005,31 @@
     .shoot-grid { grid-template-columns: 1fr 1fr; }
     .shoot-grid figure:last-child { grid-column: 1 / -1; aspect-ratio: 4 / 3; }
     .hero { padding-top: 80px; }
-    .hero-logo .wm-word { font-size: 34px; }
     .hero-proof { font-size: 10.5px; }
+  }
+  /* Hero order from the Hudson call (12 Oct 2026): headline, two-line sub, video, then the call to action */
+  .hero-cta { width: 100%; max-width: 820px; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+  .hero-cta .hero-btns { margin-top: 0; }
+  .hero-call-note {
+    font-family: Arial, sans-serif; font-size: 13px; color: #d6d6d6; line-height: 1.55; max-width: 460px;
+  }
+  .hero .testimonial-card--hero { margin-top: 0; width: 100%; }
+  .nowrap { white-space: nowrap; }
+  @media (min-width: 861px) { .hero .showreel-wrap { max-width: 720px; } }
+  @media (max-width: 860px) {
+    /* Logo centred in the top bar, menu button stays on the right */
+    nav { justify-content: center; position: fixed; }
+    nav .hamburger { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); }
+    .hero { padding-top: 76px; gap: 16px; }
+    .hero-copy { gap: 10px; }
+    .hero-copy h1 { font-size: 30px; }
+    .hero-sub { font-size: 14px; line-height: 1.5; max-width: 360px; }
+    .showreel-caption { margin-top: 8px; font-size: 12px; }
+    .hero-cta { gap: 12px; }
+    .hero-cta .hero-btns { flex-wrap: nowrap; gap: 10px; max-width: 360px; }
+    .hero-cta .hero-btns .btn-primary,
+    .hero-cta .hero-btns .btn-secondary { flex: 1 1 0; width: auto; padding: 14px 10px; }
+    .hero-call-note { font-size: 12.5px; }
   }
 </style>
 </head>
@@ -1035,27 +1055,21 @@
 
 <section class="hero" id="top">
   <div class="hero-copy">
-    <span class="wordmark wordmark--lg hero-logo" translate="no" aria-hidden="true"><span class="wm-word"><span class="wm-edge">EDGE</span><span class="wm-within">WITHIN</span></span><span class="wm-sub">PRODUCTIONS</span></span>
     <div class="eyebrow">Mobile video podcast production</div>
     <h1>
       I bring the studio.<br>
       <em>You bring the story.</em>
     </h1>
     <p class="hero-sub">
-      4K cameras, lights and mics, set up at your place. I'll help you have the conversation worth filming,
-      then edit it, cut the clips and have the first cut with you within <span data-turnaround>7</span> days.
+      4K cameras, lights and mics, set up at your place.
+      Your episode and clips back within <span class="nowrap"><span data-turnaround>7</span> days</span>.
     </p>
-    <p class="hero-promise"><strong>First cut of your episode and clips within <span data-turnaround>7</span> days of recording.</strong></p>
-    <div class="hero-btns">
-      <a href="https://calendly.com/mjdaavenport/podcast-production-chat" target="_blank" rel="noopener" data-booking-link class="btn-primary">Book a call</a>
-      <a href="#pricing" class="btn-secondary">See packages</a>
-    </div>
-    <div class="pill">A$2,500 pilot · A$2,000/ep season<span class="pill-loc">Byron Bay &amp; Northern Rivers</span></div>
-    <a href="#pricing" class="hero-price-link">Packages from A$2,000 an episode</a>
-    <p class="hero-proof">21 episodes shipped · 3.7M Reels views in 90 days · $0 on ads</p>
   </div>
 
   <div class="showreel-wrap">
+    <!-- TODO (Hudson call, 12 Oct 2026): swap this for the 5 to 10 minute sales video (VSL) once it's filmed:
+         Mat explaining the offer, behind-the-scenes setup, snippets of shoots. Then move the Inbluem episode
+         down into the clips section. -->
     <div class="showreel">
       <!-- Click-to-load facade: the YouTube player (about 1 MB) only loads when someone presses play. -->
       <a class="yt-facade" href="https://www.youtube.com/watch?v=vvOc_aE6_3o&amp;t=4s"
@@ -1071,12 +1085,23 @@
     </div>
     <!-- Montana Lower's Inbluem episode (youtube.com/watch?v=vvOc_aE6_3o), starts at 0:04. -->
     <p class="showreel-caption">Produced for Montana Lower (Inbluem), my first production client.</p>
-    <!-- Testimonial: Montana Lower (Inbluem), approved by Mat 29 Sep 2026. -->
-    <figure class="testimonial-card testimonial-card--hero">
-      <blockquote class="testimonial">&ldquo;Working with Mat gave me the support and guidance I needed to bring a dream to life. He handled everything from filming and editing to clips and getting my show live on Spotify and Apple. He respected and inspired my unique vision, and he made me feel so much more confident. I&rsquo;m eternally grateful and keen to keep creating together!&rdquo;</blockquote>
-      <figcaption class="testimonial-cite">Montana Lower, Host of Inbluem Podcast</figcaption>
-    </figure>
   </div>
+
+  <div class="hero-cta">
+    <div class="hero-btns">
+      <a href="https://calendly.com/mjdaavenport/podcast-production-chat" target="_blank" rel="noopener" data-booking-link class="btn-primary">Book a call</a>
+      <a href="#pricing" class="btn-secondary">See packages</a>
+    </div>
+    <p class="hero-call-note">A 15-minute chat to see if we're a good fit for each other. No pressure. If it's not right, you've lost nothing.</p>
+    <div class="pill">A$2,500 pilot · A$2,000/ep season<span class="pill-loc">Byron Bay &amp; Northern Rivers</span></div>
+    <p class="hero-proof">21 episodes shipped · 3.7M Reels views in 90 days · $0 on ads</p>
+  </div>
+
+  <!-- Testimonial: Montana Lower (Inbluem), approved by Mat 29 Sep 2026. -->
+  <figure class="testimonial-card testimonial-card--hero">
+    <blockquote class="testimonial">&ldquo;Working with Mat gave me the support and guidance I needed to bring a dream to life. He handled everything from filming and editing to clips and getting my show live on Spotify and Apple. He respected and inspired my unique vision, and he made me feel so much more confident. I&rsquo;m eternally grateful and keen to keep creating together!&rdquo;</blockquote>
+    <figcaption class="testimonial-cite">Montana Lower, Host of Inbluem Podcast</figcaption>
+  </figure>
 
   <div class="proof-strip">
     <div>
@@ -1413,7 +1438,7 @@
       <div class="book-card">
         <div>
           <h3>Book a 15-minute call</h3>
-          <p>No pitch. We talk through your idea and whether a pilot makes sense.</p>
+          <p>No pitch. We talk through your idea and see if we're a good fit for each other. I don't take on every project, and if it's not right, you've lost nothing.</p>
         </div>
         <a id="bookingLink" class="btn-primary" href="https://calendly.com/mjdaavenport/podcast-production-chat" target="_blank" rel="noopener" data-booking-link>Book a call</a>
       </div>
