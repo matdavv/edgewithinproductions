@@ -961,6 +961,56 @@
     html { scroll-behavior: auto; }
     .btn-primary:hover, .submit-btn:hover { transform: none; }
   }
+
+  /* Site refresh (Oct 2026): hero photo, logo, proof line, How we shoot, About */
+  .hero {
+    background:
+      linear-gradient(180deg, rgba(10,10,10,0.84) 0%, rgba(10,10,10,0.9) 55%, #0D0D0D 100%),
+      url("assets/img/hero-bamboo-set.jpg") center top / cover no-repeat,
+      #0D0D0D;
+    padding-top: 92px;
+  }
+  .hero-copy { gap: 14px; }
+  .hero-logo { align-items: center; margin-bottom: 4px; }
+  .hero-logo .wm-word { font-size: 44px; }
+  .hero-logo .wm-sub { font-size: 11px; margin-top: 6px; }
+  .hero-sub { color: #d6d6d6; }
+  .hero-proof {
+    font-family: 'Courier New', monospace; font-size: 12px; letter-spacing: 0.08em;
+    color: #e8e8e8; text-transform: uppercase;
+  }
+  .shoot-photos { max-width: 1000px; margin: 0 auto 36px; }
+  .shoot-photos-title {
+    font-family: Arial, sans-serif; font-size: 14px; font-weight: 700; color: var(--gold);
+    text-align: center; margin-bottom: 14px; letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  .shoot-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+  .shoot-grid figure { margin: 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); aspect-ratio: 4 / 5; }
+  .shoot-grid img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .hiw-grid { display: grid; grid-template-columns: 2.2fr 1fr; gap: 18px; max-width: 1000px; margin: 0 auto 28px; align-items: start; }
+  .hiw-grid .timeline { grid-template-columns: 1fr 1fr; margin-bottom: 0; }
+  .hiw-grid .timeline::before { display: none; }
+  .about-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 32px; max-width: 1000px; margin: 0 auto; align-items: center; }
+  .about-photo { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border); display: block; }
+  .about-grid h2 { margin: 6px 0 14px; }
+  .about-grid p { font-family: Arial, sans-serif; font-size: 15px; color: var(--grey); line-height: 1.7; margin-bottom: 12px; }
+  .client-result { font-family: Arial, sans-serif; font-size: 14px; color: var(--gold); margin-top: 14px; }
+  .pilot-start { color: var(--gold) !important; font-weight: 700; margin-top: 8px; }
+  .tier-start {
+    font-family: 'Courier New', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--gold-dark); margin-bottom: 4px;
+  }
+  @media (max-width: 900px) {
+    .hiw-grid, .about-grid { grid-template-columns: 1fr; }
+    .hiw-grid .timeline { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 560px) {
+    .shoot-grid { grid-template-columns: 1fr 1fr; }
+    .shoot-grid figure:last-child { grid-column: 1 / -1; aspect-ratio: 4 / 3; }
+    .hero { padding-top: 80px; }
+    .hero-logo .wm-word { font-size: 34px; }
+    .hero-proof { font-size: 10.5px; }
+  }
 </style>
 </head>
 <body>
@@ -985,23 +1035,24 @@
 
 <section class="hero" id="top">
   <div class="hero-copy">
-    <div class="eyebrow">Edge Within · Podcast production</div>
+    <span class="wordmark wordmark--lg hero-logo" translate="no" aria-hidden="true"><span class="wm-word"><span class="wm-edge">EDGE</span><span class="wm-within">WITHIN</span></span><span class="wm-sub">PRODUCTIONS</span></span>
+    <div class="eyebrow">Mobile video podcast production</div>
     <h1>
-      I don't just film your podcast.<br>
-      <em>I help you have the conversation worth filming.</em>
+      I bring the studio.<br>
+      <em>You bring the story.</em>
     </h1>
     <p class="hero-sub">
-      A mobile studio run by a host. 4K cameras, lighting and mics, set up wherever your story lives.
-      I can offer question ideas and prompts if you'd like them, guide the conversation on the day,
-      then edit the episode, cut the clips and get it live.
+      4K cameras, lights and mics, set up at your place. I'll help you have the conversation worth filming,
+      then edit it, cut the clips and have the first cut with you within <span data-turnaround>7</span> days.
     </p>
-    <p class="hero-promise"><strong>Your episode and clips, delivered within <span data-turnaround>7</span> days of recording.</strong></p>
+    <p class="hero-promise"><strong>First cut of your episode and clips within <span data-turnaround>7</span> days of recording.</strong></p>
     <div class="hero-btns">
       <a href="https://calendly.com/mjdaavenport/podcast-production-chat" target="_blank" rel="noopener" data-booking-link class="btn-primary">Book a call</a>
       <a href="#pricing" class="btn-secondary">See packages</a>
     </div>
     <div class="pill">A$2,500 pilot · A$2,000/ep season<span class="pill-loc">Northern Rivers</span></div>
     <a href="#pricing" class="hero-price-link">Packages from A$2,000 an episode</a>
+    <p class="hero-proof">21 episodes shipped · 3.7M Reels views in 90 days · $0 on ads</p>
   </div>
 
   <div class="showreel-wrap">
@@ -1014,7 +1065,7 @@
         <img src="https://i.ytimg.com/vi/vvOc_aE6_3o/hqdefault.jpg"
              srcset="https://i.ytimg.com/vi/vvOc_aE6_3o/hqdefault.jpg 480w, https://i.ytimg.com/vi/vvOc_aE6_3o/sddefault.jpg 640w, https://i.ytimg.com/vi/vvOc_aE6_3o/maxresdefault.jpg 1280w"
              sizes="(max-width: 940px) 100vw, 900px"
-             alt="" width="1280" height="720" decoding="async">
+             alt="Thumbnail of the Inbluem podcast episode produced for Montana Lower by Edge Within" width="1280" height="720" decoding="async">
         <span class="yt-play" aria-hidden="true"><svg viewBox="0 0 68 48" width="72" height="51" focusable="false"><path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.2.3 34 .3 34 .3S12.8.3 7.5 1.7a8.5 8.5 0 0 0-6 6C.1 13 .1 24 .1 24s0 11 1.4 16.3a8.5 8.5 0 0 0 6 6c5.3 1.4 26.5 1.4 26.5 1.4s21.2 0 26.5-1.4a8.5 8.5 0 0 0 6-6c1.4-5.3 1.4-16.3 1.4-16.3s0-11-1.4-16.3z" fill="#b8860b"/><path d="M27 34V14l18 10z" fill="#0A0A0A"/></svg></span>
       </a>
     </div>
@@ -1066,12 +1117,17 @@
         <div class="l">Spent on ads</div>
       </div>
       <div class="proof-metric">
-        <div class="v">20</div>
+        <div class="v">21</div>
         <div class="l">Episodes shipped</div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- TODO (edit list C): "Clips from the show" row goes here, straight after the hero and before the stats.
+     Heading "Clips from the show", sub line "Every episode comes with clips like these."
+     4 to 6 vertical shorts (still frame + play icon, view count, link to Reel; caption: guest name and episode title).
+     Waiting on Mat's Reel links and view counts. -->
 
 <section class="section" id="who">
   <div class="section-header center">
@@ -1093,11 +1149,7 @@
       <p>Document culture, community, and story in a format that compounds over a run, not a one-off shoot.</p>
     </div>
   </div>
-  <!-- Second testimonial from Montana Lower (Inbluem), approved by Mat 29 Sep 2026. -->
-  <figure class="testimonial-card testimonial-card--hero">
-    <blockquote class="testimonial">&ldquo;I have found creating a podcast has allowed me to have conversations about my business and create meaningful &lsquo;content&rsquo; in a way that doesn&rsquo;t exhaust me. It&rsquo;s engaging for my community and allows me to speak about our ethos without having to &lsquo;sell&rsquo; to them.&rdquo;</blockquote>
-    <figcaption class="testimonial-cite">Montana Lower, Host of Inbluem Podcast</figcaption>
-  </figure>
+  <!-- TODO (edit list D): second testimonial from a different client goes here (Montana's second quote removed so only one Montana quote remains). -->
 </section>
 
 
@@ -1124,19 +1176,9 @@
         <div class="compare-ew" role="cell">A host who interviews you or helps you lead</div>
       </div>
       <div class="compare-row" role="row">
-        <div class="compare-label" role="rowheader">Getting comfortable</div>
-        <div class="compare-studio" role="cell">You walk in and start</div>
-        <div class="compare-ew" role="cell">Optional breathwork so you settle in and open up</div>
-      </div>
-      <div class="compare-row" role="row">
         <div class="compare-label" role="rowheader">Who edits</div>
         <div class="compare-studio" role="cell">Whoever's on shift</div>
         <div class="compare-ew" role="cell">The same person who was there for the conversation</div>
-      </div>
-      <div class="compare-row" role="row">
-        <div class="compare-label" role="rowheader">What you get</div>
-        <div class="compare-studio" role="cell">Footage and edits, priced item by item</div>
-        <div class="compare-ew" role="cell">The whole episode: edit, 5 clips, episode thumbnail, titles, chapters and upload</div>
       </div>
       <div class="compare-row" role="row">
         <div class="compare-label" role="rowheader">Proof it works</div>
@@ -1148,39 +1190,31 @@
   <p class="compare-close">If you just need a room and a camera, a studio will be cheaper. If you want a show that sounds like you and looks like your world, that's what I do.</p>
 </section>
 
-<section class="section" id="included">
+<section class="section" id="how-it-works">
   <div class="section-header center">
-    <div class="eyebrow">On the day</div>
-    <h2>How a shoot works.</h2>
-    <p>One person, one kit, one standard.</p>
-  </div>
-
-  <div class="included-box included-box-single">
-    <h3>On site</h3>
-    <ul>
-      <li>Full 4K setup, lighting, premium mics. Same kit I use on Edge Within</li>
-      <li>Your place or a site we agree. Indoor or shaded outdoor</li>
-      <li>One person running the day. I interview you, with question ideas and prompts if you'd like them, or you host and I facilitate</li>
-      <li>Optional breathwork: before we record, I can guide a short session so you arrive in your body and speak from there, rather than performing for the camera.</li>
-      <li>Travel scoped per shoot</li>
-    </ul>
-  </div>
-</section>
-
-<section class="section" id="what-you-get">
-  <div class="section-header center">
-    <div class="eyebrow">What you get</div>
+    <div class="eyebrow">How it works</div>
     <h2>From record day to <em>ready to publish</em>.</h2>
-    <p>Your full episode and clips, delivered within <span data-turnaround>7</span> days of recording.</p>
+    <p>First cut of your full episode and clips within <span data-turnaround>7</span> days of recording.</p>
   </div>
 
+  <div class="shoot-photos" aria-label="How we shoot">
+    <h3 class="shoot-photos-title">How we shoot</h3>
+    <div class="shoot-grid">
+      <figure><img src="assets/img/garden-shoot.jpg" width="1050" height="1400" loading="lazy" decoding="async" alt="Two people recording a podcast at an outdoor table in a garden, lit by two softbox lights"></figure>
+      <figure><img src="assets/img/deck-setup.jpg" width="1050" height="1400" loading="lazy" decoding="async" alt="Podcast set on a covered timber deck with cameras on tripods and a round softbox light"></figure>
+      <figure><img src="assets/img/indoor-bts-mat.jpg" width="1400" height="1050" loading="lazy" decoding="async" alt="Mat adjusting a 4K camera on a tripod while setting up an indoor podcast set"></figure>
+    </div>
+  </div>
+
+  <div class="hiw-grid">
+  <div>
   <ol class="timeline">
     <li class="tl-step">
       <div class="phase-num" aria-hidden="true">1</div>
       <div class="tl-card">
         <div class="tl-when">On the day</div>
         <h3>Record day</h3>
-        <p>I guide the conversation so you can relax into it. Want question ideas or prompts? I can offer those too.</p>
+        <p>I guide the conversation so you can relax into it.</p>
       </div>
     </li>
     <li class="tl-step">
@@ -1203,11 +1237,23 @@
       <div class="phase-num" aria-hidden="true">4</div>
       <div class="tl-card">
         <div class="tl-when">Within <span data-turnaround>7</span> days</div>
-        <h3>Launch</h3>
+        <h3>First cut</h3>
         <p>Titles, description, chapters and a custom episode thumbnail. Ready to publish.</p>
       </div>
     </li>
   </ol>
+  </div>
+  <aside class="included-box hiw-side">
+    <h3>On site</h3>
+    <ul>
+      <li>Full 4K setup, lighting, premium mics. Same kit I use on Edge Within</li>
+      <li>Your place or a site we agree. Indoor or shaded outdoor</li>
+      <li>I interview you, with question ideas and prompts if you'd like them, or you host and I facilitate</li>
+      <li>Getting comfortable: optional breathwork before we record so you settle in and open up</li>
+      <li>Travel scoped per shoot</li>
+    </ul>
+  </aside>
+  </div>
 
   <div class="included-grid">
     <div class="included-box">
@@ -1215,23 +1261,33 @@
       <ul>
         <li>Long-form edit with colour grading (multicam)</li>
         <li>5 hook-first short-form clips</li>
-        <li>Custom episode thumbnail for Spotify and YouTube</li>
+        <li>Custom episode thumbnail for Spotify and YouTube, plus titles, descriptions and chapters</li>
         <li>Two rounds of revisions</li>
-        <li>Titles, descriptions, chapters</li>
         <li>Upload to Spotify, Apple Podcasts, and YouTube once you approve</li>
-        <li>You own the content</li>
       </ul>
     </div>
     <div class="included-box included-box--gold">
       <h3>Hook-first clips</h3>
       <p>Every clip is picked from the strongest, most shareable moments of your episode. Never chosen at random.</p>
       <p>Each one opens on the line that makes people stop scrolling, so your best ideas reach new people.</p>
-      <p class="included-note">Full episode, clips and custom episode thumbnail delivered within <span data-turnaround>7</span> days of recording.</p>
+      <p class="included-note">First cut of the full episode, clips and thumbnail within <span data-turnaround>7</span> days of recording.</p>
     </div>
   </div>
   <p class="included-note" style="text-align:center; max-width:620px; margin:20px auto 0;">
     Not in a podcast package: <a href="#addons" style="color:var(--gold); text-decoration:none; font-weight:600;">see add-ons</a> for extras, plus unlimited revisions.
   </p>
+</section>
+
+<section class="section" id="about">
+  <div class="about-grid">
+    <img class="about-photo" src="assets/img/mat-portrait.jpg" width="1600" height="844" loading="lazy" decoding="async" alt="Mat, host of the Edge Within podcast, talking to camera at a podcast mic">
+    <div>
+      <div class="eyebrow">About</div>
+      <h2>Hi, I'm Mat.</h2>
+      <p>I host the Edge Within podcast and have built it in public since January 2026, with zero paid ads. 21 episodes in, the production I run for my own show is the production I run for yours.</p>
+      <p>I'm a host, not just a camera operator, so I'm in the room for the conversation and I edit it myself.</p>
+    </div>
+  </div>
 </section>
 
 <section class="section" id="clients">
@@ -1246,11 +1302,12 @@
       <ul>
         <li>Travel to location and outdoor shoot</li>
         <li>Optional breathwork and guidance before recording</li>
-        <li>Long-form edit and 5-6 clips</li>
+        <li>Long-form edit and 5 clips</li>
         <li>Custom episode thumbnail</li>
         <li>Titles, descriptions, and chapters</li>
         <li>Show set up on Spotify and Apple Podcasts</li>
       </ul>
+      <p class="client-result">Result: her show went live on Spotify and Apple, with 5 clips ready to post.</p>
     </div>
 
   </div>
@@ -1262,10 +1319,12 @@
       <div class="eyebrow">Podcast packages</div>
       <h2>Same production every time.</h2>
       <p>Pay per episode as each cycle completes. You do not have to pay the full pack up front.</p>
+      <p class="pilot-start">Most clients start with the Pilot.</p>
     </div>
 
     <div class="pricing-grid">
       <div class="tier">
+        <div class="tier-start">Starting point</div>
         <div class="tier-name">Pilot</div>
         <div class="tier-price">A$2,500</div>
         <div class="tier-period">per episode</div>
@@ -1467,7 +1526,7 @@
     </div>
     <div class="faq-item">
       <button type="button" class="faq-q" aria-expanded="false">How fast is turnaround?</button>
-      <div class="faq-a">Your edited episode, clips and custom episode thumbnail are delivered within <span data-turnaround>7</span> days of recording. Revisions typically take 2-3 business days per round.</div>
+      <div class="faq-a">You get the first cut of your episode, clips and thumbnail within <span data-turnaround>7</span> days of recording. Revisions typically take 2 to 3 business days per round, and everything is ready to publish once you approve.</div>
     </div>
     <div class="faq-item">
       <button type="button" class="faq-q" aria-expanded="false">Is breathwork required?</button>
