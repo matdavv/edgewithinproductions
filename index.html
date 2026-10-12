@@ -96,6 +96,9 @@
   .wordmark--on-light .wm-sub { color: #555555; }
   nav .wordmark .wm-word { font-size: 23px; }
   nav .wordmark .wm-sub { font-size: 7.5px; letter-spacing: 0.43em; margin-top: 3px; }
+  /* PRODUCTIONS centred under EDGEWITHIN; the negative margin cancels the trailing letter-spacing */
+  nav .wordmark { align-items: center; }
+  nav .wordmark .wm-sub { margin-right: -0.43em; }
   .nav-links { display: flex; gap: 22px; align-items: center; list-style: none; }
   .nav-links a {
     font-family: Arial, sans-serif; font-size: 13px; color: var(--grey);
