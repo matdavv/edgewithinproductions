@@ -1039,7 +1039,7 @@
   .reels-row {
     display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory;
     padding: 4px 4px 12px; margin: 0 auto; max-width: 1000px;
-    -webkit-overflow-scrolling: touch; scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
   }
   .reel { margin: 0; flex: 0 0 200px; scroll-snap-align: start; }
   .reel-frame {
@@ -1064,7 +1064,14 @@
   }
   .reels-more a:hover { border-color: var(--gold); color: var(--white); }
   .reels-hint { display: none; text-align: center; font-family: Arial, sans-serif; font-size: 12px; color: var(--grey2); margin-top: 4px; }
-  @media (min-width: 1061px) { .reels-row { justify-content: center; } .reel { flex-basis: 152px; } }
+  /* Never show a scrollbar on the clips row */
+  .reels-row { scrollbar-width: none; -ms-overflow-style: none; }
+  .reels-row::-webkit-scrollbar { display: none; }
+  /* Desktop and tablet: all clips share the row evenly, no sideways scroll */
+  @media (min-width: 861px) {
+    .reels-row { overflow: visible; justify-content: center; }
+    .reel { flex: 1 1 0; min-width: 0; max-width: 200px; }
+  }
   @media (max-width: 860px) {
     .reels-section { padding-left: 0 !important; padding-right: 0 !important; }
     .reels-section .section-header { padding: 0 20px; }
