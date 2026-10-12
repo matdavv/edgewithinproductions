@@ -1034,6 +1034,37 @@
     .hero-cta .hero-btns .btn-secondary { flex: 1 1 0; width: auto; padding: 14px 10px; }
     .hero-call-note { font-size: 12.5px; }
   }
+  /* Clips row: swipeable vertical reels, videos only load when played */
+  .reels-section { padding-top: 56px; padding-bottom: 40px; }
+  .reels-row {
+    display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory;
+    padding: 4px 4px 12px; margin: 0 auto; max-width: 1000px;
+    -webkit-overflow-scrolling: touch; scrollbar-width: thin;
+  }
+  .reel { margin: 0; flex: 0 0 200px; scroll-snap-align: start; }
+  .reel-frame {
+    position: relative; aspect-ratio: 9 / 16; border-radius: 12px; overflow: hidden;
+    border: 1px solid var(--border); background: #000;
+  }
+  .reel-frame video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .reel-views {
+    position: absolute; right: 8px; bottom: 44px; pointer-events: none;
+    background: rgba(10,10,10,0.78); color: var(--gold); border-radius: 5px; padding: 4px 7px;
+    font-family: 'Courier New', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.04em;
+  }
+  .reel figcaption {
+    font-family: Arial, sans-serif; font-size: 12.5px; color: var(--grey); line-height: 1.45; margin-top: 8px;
+  }
+  .reel figcaption strong { color: var(--white); font-weight: 700; }
+  .reels-hint { display: none; text-align: center; font-family: Arial, sans-serif; font-size: 12px; color: var(--grey2); margin-top: 4px; }
+  @media (min-width: 1061px) { .reels-row { justify-content: center; } .reel { flex-basis: 184px; } }
+  @media (max-width: 860px) {
+    .reels-section { padding-left: 0 !important; padding-right: 0 !important; }
+    .reels-section .section-header { padding: 0 20px; }
+    .reels-row { padding-left: 20px; padding-right: 20px; scroll-padding-left: 20px; }
+    .reel { flex-basis: 62vw; max-width: 240px; }
+    .reels-hint { display: block; }
+  }
 </style>
 </head>
 <body>
@@ -1152,10 +1183,51 @@
   </div>
 </section>
 
-<!-- TODO (edit list C): "Clips from the show" row goes here, straight after the hero and before the stats.
-     Heading "Clips from the show", sub line "Every episode comes with clips like these."
-     4 to 6 vertical shorts (still frame + play icon, view count, link to Reel; caption: guest name and episode title).
-     Waiting on Mat's Reel links and view counts. -->
+<section class="section reels-section" id="clips">
+  <div class="section-header center">
+    <div class="eyebrow">Clips from the show</div>
+    <h2>Every episode comes with <em>clips like these</em>.</h2>
+    <p>Filmed and cut with the same kit and system I bring to your shoot.</p>
+  </div>
+  <div class="reels-row" role="list">
+      <figure class="reel">
+        <div class="reel-frame">
+          <video src="assets/reels/whatisforyou.mp4" poster="assets/reels/whatisforyou.jpg" preload="none" playsinline controls controlslist="nodownload" width="720" height="1280" aria-label="Clip: What is for you with Billy Otto"></video>
+          <!-- View count badge: add e.g. <span class="reel-views">1.2M views</span> here once Mat sends the number. -->
+        </div>
+        <figcaption><strong>Billy Otto</strong> · What is for you</figcaption>
+      </figure>
+      <figure class="reel">
+        <div class="reel-frame">
+          <video src="assets/reels/leaders.mp4" poster="assets/reels/leaders.jpg" preload="none" playsinline controls controlslist="nodownload" width="720" height="1280" aria-label="Clip: Leaders"></video>
+          <!-- View count badge: add e.g. <span class="reel-views">1.2M views</span> here once Mat sends the number. -->
+        </div>
+        <figcaption>Leaders</figcaption>
+      </figure>
+      <figure class="reel">
+        <div class="reel-frame">
+          <video src="assets/reels/imnotadoig.mp4" poster="assets/reels/imnotadoig.jpg" preload="none" playsinline controls controlslist="nodownload" width="720" height="1280" aria-label="Clip: I’m not a doig"></video>
+          <!-- View count badge: add e.g. <span class="reel-views">1.2M views</span> here once Mat sends the number. -->
+        </div>
+        <figcaption>I’m not a doig</figcaption>
+      </figure>
+      <figure class="reel">
+        <div class="reel-frame">
+          <video src="assets/reels/bondishooting.mp4" poster="assets/reels/bondishooting.jpg" preload="none" playsinline controls controlslist="nodownload" width="720" height="1280" aria-label="Clip: “I walked towards the Bondi shooting.” with Heath Jones"></video>
+          <!-- View count badge: add e.g. <span class="reel-views">1.2M views</span> here once Mat sends the number. -->
+        </div>
+        <figcaption><strong>Heath Jones</strong> · “I walked towards the Bondi shooting.”</figcaption>
+      </figure>
+      <figure class="reel">
+        <div class="reel-frame">
+          <video src="assets/reels/fafo.mp4" poster="assets/reels/fafo.jpg" preload="none" playsinline controls controlslist="nodownload" width="720" height="1280" aria-label="Clip: FAFO with Tom Horne"></video>
+          <!-- View count badge: add e.g. <span class="reel-views">1.2M views</span> here once Mat sends the number. -->
+        </div>
+        <figcaption><strong>Tom Horne</strong> · FAFO</figcaption>
+      </figure>
+  </div>
+  <p class="reels-hint" aria-hidden="true">Swipe for more →</p>
+</section>
 
 <section class="section" id="who">
   <div class="section-header center">
@@ -1746,6 +1818,12 @@
       errBox.style.display = 'block';
     }
   });
+</script>
+<script>
+  // Clips row: only one reel plays at a time
+  document.querySelectorAll('.reel video').forEach(v => v.addEventListener('play', () => {
+    document.querySelectorAll('.reel video').forEach(o => { if (o !== v) o.pause(); });
+  }));
 </script>
 </body>
 </html>
