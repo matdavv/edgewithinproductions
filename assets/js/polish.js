@@ -13,9 +13,24 @@
   if (enq && /^#(inquire|inquireForm)$/.test(location.hash)) enq.open = true;
   if (enq && /[?&]package=/.test(location.search)) enq.open = true;
 
-  // Quiet fade-up on reveal; content stays visible without JS or with reduced motion
+  // Lazy photos: start fetching once the page has loaded, so no section is ever left blank
+  function warm(){ document.querySelectorAll('img[loading="lazy"]').forEach(function(i){ i.loading = 'eager'; }); }
+  window.addEventListener('load', function(){ (window.requestIdleCallback || function(f){ setTimeout(f, 300); })(warm); });
+
+  // Quiet fade-up on reveal. Only small text blocks and cards fade; images, video and
+  // whole section wrappers never do. Content stays visible without JS or with reduced motion.
   if (rm || !('IntersectionObserver' in window)) return;
-  var els = document.querySelectorAll('main > section > *, main > .form-section > *, .thanks-wrap > *');
-  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }); }, { rootMargin: '0px 0px -8% 0px', threshold: 0.01 });
-  els.forEach(function(el){ if (el.getBoundingClientRect().top < innerHeight) return; el.classList.add('reveal'); io.observe(el); });
+  var sel = 'main h2, main .section-header, main .s-kicker, .hiw-steps li, .s-paths > *, .s-quotes > *, .testimonial-card, .tier, .faq-item, .biz-combined > div, .proof-line, .thanks-wrap > *';
+  var els = [].slice.call(document.querySelectorAll(sel)).filter(function(el){
+    var r = el.getBoundingClientRect();
+    return r.height > 0 && r.height < innerHeight * 0.8 && r.top > innerHeight && !el.querySelector('img, video, iframe');
+  });
+  function show(el){ el.classList.add('in'); }
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ show(e.target); io.unobserve(e.target);} }); }, { rootMargin: '0px 0px -5% 0px', threshold: 0 });
+  els.forEach(function(el){ el.classList.add('reveal'); io.observe(el); });
+  // Safety net: anything already scrolled past (fast jumps, anchors, restored scroll) or printing shows at once
+  function sweep(){ els.forEach(function(el){ if (!el.classList.contains('in') && el.getBoundingClientRect().top < innerHeight) show(el); }); }
+  window.addEventListener('scroll', function(){ requestAnimationFrame(sweep); }, { passive: true });
+  window.addEventListener('hashchange', sweep);
+  window.addEventListener('beforeprint', function(){ els.forEach(show); });
 })();
