@@ -1158,6 +1158,14 @@
   .form-card .cal-mobile p { color: #555; }
   .wordmark { min-height: 44px; justify-content: center; }
   .proof-strip a, .form-dm a { display: inline-flex; align-items: center; min-height: 44px; }
+  .pay-btns { display: flex; flex-direction: column; gap: 10px; }
+  .pay-btns a { text-align: center; }
+  .pay-chat { font-family: Arial, sans-serif; font-size: 15px; line-height: 1.5; margin-top: 12px; text-align: center; color: inherit; opacity: 0.85; }
+  .pay-chat a { color: var(--gold); display: inline-flex; align-items: center; min-height: 44px; }
+  .tier .pay-chat { color: #333; opacity: 1; }
+  .tier .pay-chat a { color: #7a5a00; }
+  .hero-alt { font-family: Arial, sans-serif; font-size: 16px; color: #d6d6d6; margin-top: 12px; text-align: center; }
+  .hero-alt a { color: var(--gold); display: inline-flex; align-items: center; min-height: 44px; }
 </style>
 </head>
 <body>
@@ -1188,8 +1196,9 @@
   </div>
   <div class="hero-cta">
     <div class="hero-btns">
-      <a href="#book" class="btn-primary" data-package="creator">Book a Creator Session</a>
+      <a href="https://buy.stripe.com/28EfZadRA1NWbhYd5GgMw00" target="_blank" rel="noopener" class="btn-primary">Book a Creator Session · A$750</a>
     </div>
+    <p class="hero-alt">Filming at your place? <a href="https://buy.stripe.com/28E00c8xggIQ0Dk5DegMw01" target="_blank" rel="noopener">Pay A$1,050 on location</a>. Want to chat first? <a href="#book">Book a free 30 minute call.</a></p>
     <div class="pill lp-hero-offer">Creator Session A$750 · A$1,050 on location<span class="pill-loc">Byron Bay &amp; Northern Rivers</span></div>
     <p class="hero-proof">21 episodes shipped · 3.7M Reels views in 90 days · $0 on ads</p>
   </div>
@@ -1329,7 +1338,11 @@
           <li>Extra clips A$60 each</li>
           <li>Paid upfront</li>
         </ul>
-        <a href="#book" class="btn-primary" data-package="creator">Book a Creator Session</a>
+        <div class="pay-btns">
+          <a href="https://buy.stripe.com/28EfZadRA1NWbhYd5GgMw00" target="_blank" rel="noopener" class="btn-primary">Pay A$750 at my set</a>
+          <a href="https://buy.stripe.com/28E00c8xggIQ0Dk5DegMw01" target="_blank" rel="noopener" class="btn-secondary">Pay A$1,050 on location</a>
+        </div>
+        <p class="pay-chat">Want to chat first? <a href="#book">Book a free 30 minute call.</a></p>
       </div>
       <div class="tier">
         <div class="tier-name">Full Episode</div>
@@ -1383,7 +1396,6 @@
         </div>
         <a id="bookingLink" class="btn-secondary" href="https://calendly.com/mjdaavenport/podcast-production-chat" target="_blank" rel="noopener" data-booking-link>Open in Calendly</a>
       </div>
-      <!-- Inline booking. Creator Session deposits: add a Stripe payment link here once set up. -->
       <div class="cal-mobile">
         <a class="btn-primary" href="https://calendly.com/mjdaavenport/podcast-production-chat" target="_blank" rel="noopener">Pick a time</a>
         <p>Opens Calendly in a new tab. Free 30 minute call.</p>
@@ -1491,7 +1503,7 @@
     </div>
     <div class="faq-item">
       <button type="button" class="faq-q" aria-expanded="false">How do payment and cancellations work?</button>
-      <div class="faq-a">Creator Sessions are paid upfront. Bigger packages take a 50% deposit, with the balance on delivery. You can move a shoot for free with 48 hours&rsquo; notice, and weather moves are always free.</div>
+      <div class="faq-a">Creator Sessions are paid upfront. Bigger packages take a 50% deposit, with the balance on delivery. You get one free reschedule with 48 hours&rsquo; notice, and weather moves are always free. Full details are in the <a href="/terms/">terms</a>.</div>
     </div>
     <div class="faq-item">
       <button type="button" class="faq-q" aria-expanded="false">Do I have to film the whole pack at once?</button>
@@ -1536,7 +1548,7 @@
   <p class="footer-abn">Edge Within Productions · ABN 80 950 408 759</p>
 </footer>
 
-<a href="#book" class="mobile-cta">Book a Creator Session</a>
+<a href="https://buy.stripe.com/28EfZadRA1NWbhYd5GgMw00" target="_blank" rel="noopener" class="mobile-cta">Book a Creator Session · A$750</a>
 
 <script>
   const hamburger = document.getElementById('hamburger');

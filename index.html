@@ -1224,6 +1224,14 @@
   .form-card .cal-mobile p { color: #555; }
   .wordmark { min-height: 44px; justify-content: center; }
   .proof-strip a, .form-dm a { display: inline-flex; align-items: center; min-height: 44px; }
+  .pay-btns { display: flex; flex-direction: column; gap: 10px; }
+  .pay-btns a { text-align: center; }
+  .pay-chat { font-family: Arial, sans-serif; font-size: 15px; line-height: 1.5; margin-top: 12px; text-align: center; color: inherit; opacity: 0.85; }
+  .pay-chat a { color: var(--gold); display: inline-flex; align-items: center; min-height: 44px; }
+  .tier .pay-chat { color: #333; opacity: 1; }
+  .tier .pay-chat a { color: #7a5a00; }
+  .hero-alt { font-family: Arial, sans-serif; font-size: 16px; color: #d6d6d6; margin-top: 12px; text-align: center; }
+  .hero-alt a { color: var(--gold); display: inline-flex; align-items: center; min-height: 44px; }
 </style>
 <script type="application/ld+json">
 {
@@ -1281,9 +1289,10 @@
     <h1>I bring the studio.<br><em>You bring the story.</em></h1>
     <p class="s-lead">Video podcasts and clips for Northern Rivers founders and creators.</p>
     <div class="s-btns">
-      <a href="#book" class="btn-primary">Book a Creator Session</a>
+      <a href="https://buy.stripe.com/28EfZadRA1NWbhYd5GgMw00" target="_blank" rel="noopener" class="btn-primary">Book a Creator Session · A$750</a>
       <a href="https://calendly.com/mjdaavenport/podcast-production-chat" target="_blank" rel="noopener" data-booking-link class="btn-secondary">Book a free 30 min call</a>
     </div>
+    <p class="hero-alt">Filming at your place? <a href="https://buy.stripe.com/28E00c8xggIQ0Dk5DegMw01" target="_blank" rel="noopener">Pay A$1,050 on location</a>. Want to chat first? <a href="#book">Book a free 30 minute call.</a></p>
     <div class="s-stats">
       <div class="s-stat"><b>21</b><span>episodes shipped</span></div>
       <div class="s-stat"><b>3.7M</b><span>Reels views in 90 days</span></div>
@@ -1397,7 +1406,6 @@
     <h2>Book a time</h2>
     <p class="s-lead">Pick a time for a free 30 minute call.</p>
     <div class="s-btns s-book-btn s-book-desktop"><a href="https://calendly.com/mjdaavenport/podcast-production-chat" target="_blank" rel="noopener" data-booking-link class="btn-primary">Book a free 30 min call</a></div>
-    <!-- Creator Session deposits: add a Stripe payment link here once set up. -->
     <div class="cal-mobile">
         <a class="btn-primary" href="https://calendly.com/mjdaavenport/podcast-production-chat" target="_blank" rel="noopener">Pick a time</a>
         <p>Opens Calendly in a new tab. Free 30 minute call.</p>
