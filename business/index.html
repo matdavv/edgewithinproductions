@@ -1180,6 +1180,19 @@
   .case .client-result { font-size: 17px; }
   .case-link { text-align: center; margin-top: 18px; font-family: Arial, sans-serif; font-size: 16px; }
   .case-link a { color: var(--gold); display: inline-flex; align-items: center; min-height: 44px; }
+  .addons-more { margin-top: 14px; }
+  .addons-more summary { cursor: pointer; font-family: Arial, sans-serif; font-size: 16px; font-weight: 700; color: var(--gold); min-height: 44px; display: flex; align-items: center; }
+  .cal-fallback-small { font-family: Arial, sans-serif; font-size: 14px; text-align: center; margin-top: 10px; color: #555; }
+  .cal-fallback-small a { color: #6b4f00; }
+  .biz-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; width: 100%; max-width: 1100px; margin: 8px auto 0; }
+  .biz-point { background: rgba(20,20,20,0.85); border: 1px solid #2a2a2a; border-radius: 14px; padding: 22px; text-align: left; }
+  .biz-point h3 { font-size: 22px; color: var(--gold); margin: 0 0 6px; }
+  .biz-point p { font-family: Arial, sans-serif; font-size: 16px; line-height: 1.55; color: #e0e0e0; margin: 0; }
+  .biz-outcomes { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 28px; padding: 0; margin: 6px auto 4px; max-width: 1100px; }
+  .biz-outcomes li { font-family: Arial, sans-serif; font-size: 17px; color: #f0f0f0; }
+  .biz-outcomes li::before { content: '\2713'; color: var(--gold); margin-right: 8px; }
+  .case-link--card { text-align: left; margin-top: 10px; }
+  @media (max-width: 860px) { .biz-strip { grid-template-columns: 1fr; } .biz-outcomes { flex-direction: column; align-items: flex-start; } }
 </style>
 </head>
 <body>
@@ -1206,20 +1219,30 @@
   <div class="hero-copy">
     <div class="eyebrow">For founders and businesses</div>
     <h1>Your expertise,<br><em>as a show people actually watch.</em></h1>
-    <p class="hero-sub">A done-for-you video podcast filmed at your place. Full episode plus 8 clips, first cut in <span class="nowrap"><span data-turnaround>7</span> days</span>.</p>
+    <p class="hero-sub">A done-for-you video podcast, filmed in 4K at my set or your place. You show up and talk; I handle everything else. Full episode plus 8 clips, first cut in <span class="nowrap"><span data-turnaround>7</span> days</span>.</p>
   </div>
   <div class="hero-cta">
     <div class="hero-btns">
       <a href="#book" class="btn-primary" data-package="full">Book a free 30 min call</a>
     </div>
     <div class="pill lp-hero-offer">Full Episode A$1,900 · Series A$1,750/ep<span class="pill-loc">Byron Bay &amp; Northern Rivers</span></div>
-    <p class="hero-proof">21 episodes shipped · 3.7M Reels views in 90 days · $0 on ads</p>
   </div>
+<div class="biz-strip">
+  <div class="biz-point"><h3>Easy</h3><p>You show up and talk. I bring two matched 4K cameras, lights and premium mics, and handle the edit and upload.</p></div>
+  <div class="biz-point"><h3>Professional</h3><p>Colour graded, audio mastered, with a custom thumbnail, titles and chapters.</p></div>
+  <div class="biz-point"><h3>Experienced</h3><p>The same system I run for my own show, Edge Within. The numbers are below.</p></div>
+</div>
+<ul class="biz-outcomes">
+  <li>Explain what you do once, use it for months.</li>
+  <li>Clips for ads and socials every week.</li>
+  <li>Builds trust before the first call.</li>
+</ul>
 <div class="testimonial-pair">
   <!-- Testimonial: Montana Lower (InBluem), approved by Mat 29 Sep 2026. -->
   <figure class="testimonial-card testimonial-card--hero">
     <blockquote class="testimonial">&ldquo;I have found creating a podcast has allowed me to have conversations about my business and create meaningful ‘content’ in a way that doesn’t exhaust me. It’s engaging for my community and allows me to speak about our ethos without having to ‘sell to them’.&rdquo;</blockquote>
     <figcaption class="testimonial-cite">Montana Lower, InBluem</figcaption>
+    <p class="case-link case-link--card"><a href="/inbluem/">Read how I produced InBluem, start to finish &rarr;</a></p>
   </figure>
   <!-- Testimonial: Dan Ingram, approved by Mat 23 Oct 2026 (exact words, whole sentences). -->
   <figure class="testimonial-card testimonial-card--hero">
@@ -1227,7 +1250,6 @@
     <figcaption class="testimonial-cite">Dan Ingram, musician, vocal coach, yoga and movement teacher, and community organiser</figcaption>
   </figure>
 </div>
-<p class="case-link"><a href="/inbluem/">Read how I produced InBluem, start to finish &rarr;</a></p>
   <div class="proof-strip">
     <div>
       <div class="eyebrow">Proof of work</div>
@@ -1284,6 +1306,13 @@
   <div class="reels-row" role="list">
       <figure class="reel" role="listitem">
         <div class="reel-frame">
+          <video src="/assets/reels/web/matriarchy.mp4" poster="/assets/reels/matriarchy.webp" preload="none" playsinline controls controlslist="nodownload" width="720" height="1280" aria-label="Clip: Matriarchy, from the InBluem podcast (client)"></video>
+          <span class="reel-views">75K views</span>
+        </div>
+        <figcaption><strong>InBluem</strong> · Matriarchy <span class="reel-tag">Client</span></figcaption>
+      </figure>
+      <figure class="reel" role="listitem">
+        <div class="reel-frame">
           <video src="/assets/reels/web/ocean.mp4" poster="/assets/reels/ocean.webp" preload="none" playsinline controls controlslist="nodownload" width="720" height="1280" aria-label="Clip: 15 Years Living On The Ocean"></video>
           <span class="reel-views">1.5M views</span>
         </div>
@@ -1295,13 +1324,6 @@
           <span class="reel-views">1.3M views</span>
         </div>
         <figcaption><strong>Billy Otto</strong> · What Is For You</figcaption>
-      </figure>
-      <figure class="reel" role="listitem">
-        <div class="reel-frame">
-          <video src="/assets/reels/web/matriarchy.mp4" poster="/assets/reels/matriarchy.webp" preload="none" playsinline controls controlslist="nodownload" width="720" height="1280" aria-label="Clip: Matriarchy, from the InBluem podcast (client)"></video>
-          <span class="reel-views">75K views</span>
-        </div>
-        <figcaption><strong>InBluem</strong> · Matriarchy <span class="reel-tag">Client</span></figcaption>
       </figure>
       <figure class="reel" role="listitem">
         <div class="reel-frame">
@@ -1343,6 +1365,7 @@
           <li>Upload to YouTube, Spotify and Apple Podcasts</li>
           <li>First cut within 7 days</li>
           <li>2 rounds of revisions</li>
+          <li>Paid ad use: +25% (included with a Series or the monthly plan)</li>
         </ul>
         <a href="#book" class="btn-secondary" data-package="full">Book a full episode</a>
       </div>
@@ -1376,7 +1399,7 @@
         <a href="#book" class="btn-primary" data-package="monthly">Start a monthly plan</a>
       </div>
     </div>
-    <p class="value-note"><strong>Production days from A$2,000.</strong> Multicam shoots on location for brand, corporate and travel work. Edits quoted per episode; gear hire at cost, travel quoted per job.</p>
+    <p class="value-note"><strong>Production days from A$2,000.</strong> Multicam shoots on location for brand, corporate and travel work. Edits quoted per episode; gear hire at cost, travel quoted per job. <a href="#inquire" data-package="production">Enquire about a production day</a>.</p>
     <p class="price-note">All prices in AUD. No GST (not GST-registered). On location means within 50km of Byron Bay. Beyond that I travel anywhere in Australia, with travel quoted per job.</p>
 
     <div class="addons" id="addons">
@@ -1385,14 +1408,19 @@
         <li><strong>Extra clips</strong>Each clip is cut with the same care and finish as the Edge Within clips. Extra clips are A$60 each.</li>
         <li><strong>Cinematic clips</strong>Everything a standard clip has, plus extra flair: bolder animated text, sharper pacing and more punch. A$75 per clip, or add A$25 to upgrade any included clip.</li>
         <li><strong>Episode trailer</strong>A short trailer to launch or promote the episode. A$100.</li>
-        <li><strong>New show setup</strong>A$250 one-off. I set up your Spotify and Apple Podcasts listings. You supply logins and show details up front.</li>
         <li><strong>Raw files</strong>All camera and audio files from your shoot, alongside any package. A$150.</li>
         <li><strong>Paid ad usage</strong>Organic use on your own channels is always included. Running the content as paid ads adds 25%. Included with a Series, the monthly plan and production days.</li>
         <li><strong>Extra revisions or extra work</strong>Revision rounds beyond those included, or any work outside the agreed scope. A$125 an hour.</li>
         <li><strong>Travel</strong>On location means within 50km of Byron Bay. Beyond that I travel anywhere in Australia, with travel quoted per job.</li>
-        <li><strong>Guest outreach</strong>Optional support if you want help booking.</li>
-        <li><strong>Social posting</strong>I can post your finished clips for you during release week.</li>
       </ul>
+      <details class="addons-more">
+        <summary>More options</summary>
+        <ul class="addons-list">
+          <li><strong>New show setup</strong>A$250 one-off. I set up your Spotify and Apple Podcasts listings. You supply logins and show details up front.</li>
+          <li><strong>Guest outreach</strong>Optional support if you want help booking.</li>
+          <li><strong>Social posting</strong>I can post your finished clips for you during release week.</li>
+        </ul>
+      </details>
     </div>
   </div>
 </section>
@@ -1411,7 +1439,6 @@
           <h3>Book a 30-minute call</h3>
           <p>No pitch. We talk through your idea and see if we're a good fit for each other. I don't take on every project, and if it's not right, you've lost nothing.</p>
         </div>
-        <a id="bookingLink" class="btn-secondary" href="https://calendly.com/mjdaavenport/podcast-production-chat" target="_blank" rel="noopener" data-booking-link>Open in Calendly</a>
       </div>
       <div class="cal-mobile">
         <a class="btn-primary" href="https://calendly.com/mjdaavenport/podcast-production-chat" target="_blank" rel="noopener">Pick a time</a>
@@ -1744,7 +1771,7 @@
     const f = document.createElement('iframe');
     f.src = btn.dataset.calSrc; f.title = 'Book a time with Mat on Calendly';
     f.style.cssText = 'display:block;width:100%;height:' + (innerWidth < 600 ? 820 : 700) + 'px;border:0';
-    box.appendChild(f); box.classList.add('loaded'); f.focus();
+    box.appendChild(f); box.classList.add('loaded'); const fb = document.createElement('p'); fb.className = 'cal-fallback-small'; fb.innerHTML = 'Calendar not loading? <a href="https://calendly.com/mjdaavenport/podcast-production-chat" target="_blank" rel="noopener">Open it in Calendly</a>.'; box.after(fb); f.focus();
   }));
 </script>
 </body>
