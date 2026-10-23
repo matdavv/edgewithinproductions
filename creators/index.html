@@ -1190,6 +1190,15 @@
   .case .client-result { font-size: 17px; }
   .case-link { text-align: center; margin-top: 18px; font-family: Arial, sans-serif; font-size: 16px; }
   .case-link a { color: var(--gold); display: inline-flex; align-items: center; min-height: 44px; }
+  .pay-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 640px; margin: 0 auto; width: 100%; }
+  .pay-pair a { display: flex; align-items: center; justify-content: center; text-align: center; min-height: 52px; padding: 14px 16px; box-sizing: border-box; }
+  .pay-pair .btn-alt { background: transparent; color: var(--gold); border: 2px solid var(--gold); }
+  .pay-pair .btn-alt:hover { background: var(--gold); color: #0A0A0A; }
+  .tier .pay-pair { grid-template-columns: 1fr; }
+  .tier .pay-pair .btn-alt { color: #6b4f00; border-color: #8a6500; }
+  .pay-note a { color: var(--gold); display: inline-flex; align-items: center; min-height: 44px; }
+  .tier .pay-note a { color: #6b4f00; }
+  @media (max-width: 600px) { .pay-pair { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -1216,14 +1225,14 @@
   <div class="hero-copy">
     <div class="eyebrow">For creators and personal brands</div>
     <h1>One morning.<br><em>5 ready-to-post clips.</em></h1>
-    <p class="hero-sub">I bring two 4K cameras, lights and mics. You talk. You get 5 hook-first clips, first cut in <span class="nowrap"><span data-turnaround>7</span> days</span>.</p>
+    <p class="hero-sub">Record at my set in the Northern Rivers, or I bring two 4K cameras, lights and mics to you. You talk. You get 5 hook-first clips, first cut in <span class="nowrap"><span data-turnaround>7</span> days</span>.</p>
   </div>
   <div class="hero-cta">
-    <div class="hero-btns">
-      <a href="https://buy.stripe.com/28EfZadRA1NWbhYd5GgMw00" target="_blank" rel="noopener" class="btn-primary">Book &amp; pay A$750</a>
+    <div class="pay-pair">
+      <a href="https://buy.stripe.com/28EfZadRA1NWbhYd5GgMw00" target="_blank" rel="noopener" class="btn-primary">Book &amp; pay A$750 · at my set</a>
+      <a href="https://buy.stripe.com/28E00c8xggIQ0Dk5DegMw01" target="_blank" rel="noopener" class="btn-primary btn-alt">Book &amp; pay A$1,050 · at your place</a>
     </div>
-    <p class="pay-note">Pay now, then pick your time.</p>
-    <p class="hero-alt">Filming at your place? <a href="https://buy.stripe.com/28E00c8xggIQ0Dk5DegMw01" target="_blank" rel="noopener">Book &amp; pay A$1,050 (on location)</a>. Want to chat first? <a href="#book">Book a free 30 minute call.</a></p>
+    <p class="pay-note">Pay now, then pick your time. Want to chat first? <a href="#book">Book a free 30 minute call.</a></p>
     <div class="pill lp-hero-offer">Creator Session A$750 · A$1,050 on location<span class="pill-loc">Byron Bay &amp; Northern Rivers</span></div>
     <p class="hero-proof">21 episodes shipped · 3.7M Reels views in 90 days · $0 on ads</p>
   </div>
@@ -1349,7 +1358,7 @@
       <p>Start with a Creator Session. Upgrade to a Full Episode when you want the long-form show too.</p>
     </div>
     <div class="pricing-grid">
-      <div class="tier featured">
+      <div class="tier featured" id="cs-card">
         <div class="tier-badge">Start here</div>
         <div class="tier-name">Creator Session</div>
         <div class="tier-price">A$750</div>
@@ -1364,12 +1373,11 @@
           <li>Extra clips A$60 each</li>
           <li>Paid upfront</li>
         </ul>
-        <div class="pay-btns">
-          <a href="https://buy.stripe.com/28EfZadRA1NWbhYd5GgMw00" target="_blank" rel="noopener" class="btn-primary">Book &amp; pay A$750</a>
-          <a href="https://buy.stripe.com/28E00c8xggIQ0Dk5DegMw01" target="_blank" rel="noopener" class="btn-secondary">Book &amp; pay A$1,050 (on location)</a>
+        <div class="pay-pair">
+          <a href="https://buy.stripe.com/28EfZadRA1NWbhYd5GgMw00" target="_blank" rel="noopener" class="btn-primary">Book &amp; pay A$750 · at my set</a>
+          <a href="https://buy.stripe.com/28E00c8xggIQ0Dk5DegMw01" target="_blank" rel="noopener" class="btn-primary btn-alt">Book &amp; pay A$1,050 · at your place</a>
         </div>
-        <p class="pay-note">Pay now, then pick your time.</p>
-        <p class="pay-chat">Want to chat first? <a href="#book">Book a free 30 minute call.</a></p>
+        <p class="pay-note">Pay now, then pick your time. Want to chat first? <a href="#book">Book a free 30 minute call.</a></p>
       </div>
       <div class="tier">
         <div class="tier-name">Full Episode</div>
@@ -1578,7 +1586,7 @@
   <p class="footer-abn">Edge Within Productions · ABN 80 950 408 759</p>
 </footer>
 
-<a href="https://buy.stripe.com/28EfZadRA1NWbhYd5GgMw00" target="_blank" rel="noopener" class="mobile-cta">Book &amp; pay A$750</a>
+<a href="#cs-card" class="mobile-cta">Book a Creator Session</a>
 
 <script>
   const hamburger = document.getElementById('hamburger');

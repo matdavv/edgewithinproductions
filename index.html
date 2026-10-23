@@ -1256,6 +1256,15 @@
   .case .client-result { font-size: 17px; }
   .case-link { text-align: center; margin-top: 18px; font-family: Arial, sans-serif; font-size: 16px; }
   .case-link a { color: var(--gold); display: inline-flex; align-items: center; min-height: 44px; }
+  .pay-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 640px; margin: 0 auto; width: 100%; }
+  .pay-pair a { display: flex; align-items: center; justify-content: center; text-align: center; min-height: 52px; padding: 14px 16px; box-sizing: border-box; }
+  .pay-pair .btn-alt { background: transparent; color: var(--gold); border: 2px solid var(--gold); }
+  .pay-pair .btn-alt:hover { background: var(--gold); color: #0A0A0A; }
+  .tier .pay-pair { grid-template-columns: 1fr; }
+  .tier .pay-pair .btn-alt { color: #6b4f00; border-color: #8a6500; }
+  .pay-note a { color: var(--gold); display: inline-flex; align-items: center; min-height: 44px; }
+  .tier .pay-note a { color: #6b4f00; }
+  @media (max-width: 600px) { .pay-pair { grid-template-columns: 1fr; } }
 </style>
 <script type="application/ld+json">
 {
@@ -1312,13 +1321,12 @@
   <div class="s-wrap">
     <h1>I bring the studio.<br><em>You bring the story.</em></h1>
     <p class="s-lead">Video podcasts and clips for Northern Rivers founders and creators.</p>
-    <div class="s-btns">
-      <a href="https://buy.stripe.com/28EfZadRA1NWbhYd5GgMw00" target="_blank" rel="noopener" class="btn-primary">Book &amp; pay A$750</a>
-      <a href="https://calendly.com/mjdaavenport/podcast-production-chat" target="_blank" rel="noopener" data-booking-link class="btn-secondary">Book a free 30 min call</a>
+    <div class="pay-pair">
+      <a href="https://buy.stripe.com/28EfZadRA1NWbhYd5GgMw00" target="_blank" rel="noopener" class="btn-primary">Book &amp; pay A$750 · at my set</a>
+      <a href="https://buy.stripe.com/28E00c8xggIQ0Dk5DegMw01" target="_blank" rel="noopener" class="btn-primary btn-alt">Book &amp; pay A$1,050 · at your place</a>
     </div>
+    <p class="pay-note">Pay now, then pick your time. Want to chat first? <a href="#book">Book a free 30 minute call.</a></p>
     <p class="hero-from">From A$750 · Byron Bay &amp; Northern Rivers</p>
-    <p class="pay-note">Pay now, then pick your time.</p>
-    <p class="hero-alt">Filming at your place? <a href="https://buy.stripe.com/28E00c8xggIQ0Dk5DegMw01" target="_blank" rel="noopener">Book &amp; pay A$1,050 (on location)</a>. Want to chat first? <a href="#book">Book a free 30 minute call.</a></p>
     <div class="s-stats">
       <div class="s-stat"><b>21</b><span>episodes shipped</span></div>
       <div class="s-stat"><b>3.7M</b><span>Reels views in 90 days</span></div>
