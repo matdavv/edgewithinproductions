@@ -508,6 +508,10 @@
     width: 6px; height: 6px; border-radius: 50%; background: var(--gold);
   }
   .tier .btn-primary { text-align: center; width: 100%; }
+  .tier .btn-primary, .tier .btn-secondary { display: block; width: 100%; text-align: center; box-sizing: border-box; letter-spacing: 0.04em; text-transform: uppercase; }
+  .tier .btn-secondary { color: #0A0A0A; border-color: #0A0A0A; }
+  .tier .btn-secondary:hover { color: var(--gold-dark); border-color: var(--gold-dark); }
+  @media (max-width: 900px) { .pricing-grid .tier.featured:not(:first-child) { margin-top: 12px; } }
 
   .value-note {
     text-align: center; font-family: Arial, sans-serif; font-size: 13.5px;
@@ -1270,6 +1274,7 @@
           <li>Thumbnail, titles, description and chapters</li>
           <li>Upload to YouTube, Spotify and Apple Podcasts</li>
           <li>First cut within 7 days</li>
+          <li>2 rounds of revisions</li>
         </ul>
         <a href="#book" class="btn-secondary" data-package="full">Book a full episode</a>
       </div>
@@ -1294,6 +1299,7 @@
         <div class="tier-period">per month · 3-month minimum</div>
         <div class="tier-total">2 Full Episodes a month · A$1,650 per episode</div>
         <ul class="tier-list">
+          <li>Everything in the Full Episode, twice a month</li>
           <li>Steady content without rebooking</li>
           <li>16 clips a month</li>
           <li>Use your clips in your own paid ads</li>
