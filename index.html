@@ -1171,6 +1171,16 @@
     .s-stat span { font-size: 15px; }
     .s-btns a { width: 100%; text-align: center; box-sizing: border-box; }
   }
+  .s-about { display: flex; align-items: center; gap: 28px; max-width: 760px; }
+  .s-about img { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 2px solid var(--gold); }
+  .s-about p { font-size: 24px; line-height: 1.45; color: var(--white); margin: 0; }
+  .s-book-btn { margin-bottom: 24px; }
+  .s-cal { position: relative; min-height: 700px; }
+  .s-cal iframe { position: relative; z-index: 1; }
+  .s-cal-loading { position: absolute; top: 50%; left: 0; right: 0; text-align: center; font-family: Arial, sans-serif; font-size: 18px; color: #bdbdbd; margin: 0; z-index: 0; }
+  .s-cal-fallback { text-align: center; font-family: Arial, sans-serif; font-size: 17px; color: #cfcfcf; margin: 14px 0 0; }
+  .s-cal-fallback a { color: var(--gold); }
+  @media (max-width: 760px) { .s-about { flex-direction: column; text-align: center; } .s-about p { font-size: 21px; } .s-cal { min-height: 820px; } }
 </style>
 </head>
 <body>
@@ -1196,7 +1206,7 @@
 <section class="hero s-hero" id="top">
   <div class="s-wrap">
     <h1>I bring the studio.<br><em>You bring the story.</em></h1>
-    <p class="s-lead">Video podcasts for Northern Rivers founders and creators. Episode plus 8 clips, first cut in 7 days.</p>
+    <p class="s-lead">Video podcasts and clips for Northern Rivers founders and creators.</p>
     <div class="s-btns">
       <a href="#book" class="btn-primary">Book a Creator Session</a>
       <a href="https://calendly.com/mjdaavenport/podcast-production-chat" target="_blank" rel="noopener" data-booking-link class="btn-secondary">Book a free 30 min call</a>
@@ -1293,6 +1303,13 @@
   </div>
 </section>
 
+<section class="s-sec" id="about">
+  <div class="s-wrap s-about">
+    <picture><source srcset="assets/img/mat-portrait.webp" type="image/webp"><img src="assets/img/mat-portrait.jpg" alt="Mat Davenport" width="220" height="220" loading="lazy" decoding="async"></picture>
+    <p>Hi, I'm Mat. I host the Edge Within podcast and bring a full studio to you, so you can just talk.</p>
+  </div>
+</section>
+
 <section class="s-sec" id="clients">
   <div class="s-wrap">
     <h2>What clients say</h2>
@@ -1313,10 +1330,13 @@
   <div class="s-wrap">
     <h2>Book a time</h2>
     <p class="s-lead">Pick a slot for a free 30 minute call or your Creator Session.</p>
+    <div class="s-btns s-book-btn"><a href="https://calendly.com/mjdaavenport/podcast-production-chat" target="_blank" rel="noopener" data-booking-link class="btn-primary">Book a free 30 min call</a></div>
     <!-- Creator Session deposits: add a Stripe payment link here once set up. -->
-    <div class="cal-embed">
+    <div class="cal-embed s-cal">
+      <p class="s-cal-loading">Loading calendar...</p>
       <iframe src="https://calendly.com/mjdaavenport/podcast-production-chat?hide_gdpr_banner=1&amp;background_color=141414&amp;text_color=f0f0f0&amp;primary_color=b8860b" title="Book a time with Mat on Calendly" loading="lazy"></iframe>
     </div>
+    <p class="s-cal-fallback">Calendar not showing? <a href="https://calendly.com/mjdaavenport/podcast-production-chat" target="_blank" rel="noopener">Open it in Calendly</a>.</p>
     <div class="dm-row">
       <a class="btn-secondary" href="https://ig.me/m/edgewithinpodcast" target="_blank" rel="noopener">Message me on Instagram</a>
       <a class="btn-secondary" href="mailto:mat@edgewithinproductions.com">Email Mat</a>
