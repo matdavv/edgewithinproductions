@@ -23,10 +23,8 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=4">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=4">
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=4">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- Anton for the wordmark. text= subsets the font to the letters in EDGE WITHIN PRODUCTIONS (a few KB); add letters here if the wordmark text changes. -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&amp;display=swap&amp;text=EDGWITHNPROUCS">
+<!-- Anton for the wordmark, self-hosted and subset to the letters in EDGE WITHIN PRODUCTIONS. -->
+<link rel="preload" href="/assets/fonts/anton-wordmark.woff2" as="font" type="font/woff2" crossorigin>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
@@ -109,7 +107,7 @@
   .nav-links a.nav-cta { padding: 8px 16px; }
   .nav-cta {
     background: var(--gold) !important; color: var(--bg) !important;
-    font-family: 'Courier New', monospace !important; font-size: 11px !important;
+    font-family: 'Courier New', monospace !important; font-size: 12px !important;
     font-weight: 700 !important; letter-spacing: 0.06em; padding: 8px 16px;
     border-radius: 5px; text-transform: uppercase;
   }
@@ -130,7 +128,7 @@
   }
 
   .eyebrow {
-    font-family: 'Courier New', monospace; font-size: 11px;
+    font-family: 'Courier New', monospace; font-size: 12px;
     letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold);
   }
 
@@ -196,7 +194,7 @@
     display: inline-block; max-width: 100%; box-sizing: border-box;
     text-align: center; line-height: 1.55;
     background: rgba(184,134,11,0.12); border: 1px solid var(--gold);
-    color: var(--gold); font-family: 'Courier New', monospace; font-size: 11px;
+    color: var(--gold); font-family: 'Courier New', monospace; font-size: 12px;
     font-weight: 700; letter-spacing: 0.08em; padding: 10px 16px;
     border-radius: 6px; text-transform: uppercase;
   }
@@ -299,7 +297,7 @@
     font-family: Arial, sans-serif; font-size: 20px; font-weight: 700; color: var(--gold); line-height: 1;
   }
   .proof-metric .l {
-    font-family: Arial, sans-serif; font-size: 11px; color: var(--grey); margin-top: 6px;
+    font-family: Arial, sans-serif; font-size: 12px; color: var(--grey); margin-top: 6px;
   }
 
   .section {
@@ -380,7 +378,7 @@
   }
   .tl-step--launch .tl-card { border-color: var(--gold); background: var(--card2); }
   .tl-when {
-    font-family: 'Courier New', monospace; font-size: 10px; font-weight: 700;
+    font-family: 'Courier New', monospace; font-size: 12px; font-weight: 700;
     letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px;
   }
   .tl-card h3 {
@@ -475,11 +473,11 @@
   .tier-badge {
     position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
     background: var(--gold); color: var(--bg); font-family: 'Courier New', monospace;
-    font-size: 9px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
     padding: 4px 14px; border-radius: 20px; white-space: nowrap;
   }
   .tier-name {
-    font-family: 'Courier New', monospace; font-size: 10px; letter-spacing: 0.16em;
+    font-family: 'Courier New', monospace; font-size: 12px; letter-spacing: 0.16em;
     text-transform: uppercase; color: #666; margin-bottom: 8px;
   }
   .tier-price {
@@ -551,7 +549,7 @@
     line-height: 1; white-space: nowrap;
   }
   .founding-price span {
-    display: block; margin-top: 6px; font-size: 11px; font-weight: 400; color: #b0b0b0;
+    display: block; margin-top: 6px; font-size: 12px; font-weight: 400; color: #b0b0b0;
     font-family: 'Courier New', monospace; letter-spacing: 0.08em; text-transform: uppercase;
   }
   .founding-callout .eyebrow { margin-bottom: 6px; }
@@ -572,7 +570,7 @@
   }
   .addons-label {
     font-family: 'Courier New', monospace;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.18em;
     text-transform: uppercase;
@@ -634,7 +632,7 @@
   .field { display: flex; flex-direction: column; gap: 6px; }
   .field.full { grid-column: 1 / -1; }
   label {
-    font-family: 'Courier New', monospace; font-size: 10px;
+    font-family: 'Courier New', monospace; font-size: 12px;
     letter-spacing: 0.12em; text-transform: uppercase; color: #555;
   }
   input, select, textarea {
@@ -741,7 +739,7 @@
   }
   .compare-row.compare-head > div {
     font-family: 'Courier New', monospace;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -803,7 +801,7 @@
     color: var(--white); margin-bottom: 4px;
   }
   .client-card .client-meta {
-    font-family: 'Courier New', monospace; font-size: 11px; letter-spacing: 0.1em;
+    font-family: 'Courier New', monospace; font-size: 12px; letter-spacing: 0.1em;
     text-transform: uppercase; color: var(--gold); margin-bottom: 14px;
   }
   .client-card ul { list-style: none; }
@@ -822,7 +820,7 @@
   }
   .todo-placeholder .todo-tag {
     display: inline-block; background: #d97706; color: #0A0A0A;
-    font-family: 'Courier New', monospace; font-size: 10px; font-weight: 700;
+    font-family: 'Courier New', monospace; font-size: 12px; font-weight: 700;
     letter-spacing: 0.12em; padding: 3px 8px; border-radius: 4px; margin-bottom: 10px;
   }
   blockquote.testimonial {
@@ -849,7 +847,7 @@
   .book-card p { font-family: Arial, sans-serif; font-size: 13.5px; color: #555; line-height: 1.5; }
   .book-card .btn-primary { white-space: nowrap; }
   .form-divider {
-    text-align: center; font-family: 'Courier New', monospace; font-size: 11px;
+    text-align: center; font-family: 'Courier New', monospace; font-size: 12px;
     letter-spacing: 0.14em; text-transform: uppercase; color: #555; margin: 0 0 18px;
   }
   .form-error {
@@ -903,7 +901,7 @@
     .compare-row.compare-head { display: none; }
     .compare-label {
       font-family: 'Courier New', monospace !important;
-      font-size: 11px !important;
+      font-size: 12px !important;
       letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--gold) !important;
@@ -914,7 +912,7 @@
     .compare-ew::before {
       display: block;
       font-family: 'Courier New', monospace;
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -952,12 +950,12 @@
     .form-section { padding-bottom: 96px; }
     .hero-btns .btn-primary,
     .hero-btns .btn-secondary { width: 100%; max-width: 320px; text-align: center; }
-    .pill { display: block; width: 100%; font-size: 10px; letter-spacing: 0.04em; padding: 10px 12px; }
+    .pill { display: block; width: 100%; font-size: 12px; letter-spacing: 0.04em; padding: 10px 12px; }
     .pill-loc { display: block; margin-top: 2px; }
     .pill-loc::before { content: none; }
     .proof-strip { padding: 20px 16px; width: 100%; }
     .proof-strip h2 { font-size: 17px; }
-    .proof-metric .l { font-size: 10px; }
+    .proof-metric .l { font-size: 12px; }
     .outcome p { overflow-wrap: break-word; }
     .section, .section-full { padding-left: 20px; padding-right: 20px; }
   }
@@ -1005,7 +1003,7 @@
   .client-result { font-family: Arial, sans-serif; font-size: 14px; color: var(--gold); margin-top: 14px; }
   .pilot-start { color: var(--gold) !important; font-weight: 700; margin-top: 8px; }
   .tier-start {
-    font-family: 'Courier New', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.14em;
+    font-family: 'Courier New', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.14em;
     text-transform: uppercase; color: var(--gold-dark); margin-bottom: 4px;
   }
   @media (max-width: 900px) {
@@ -1016,7 +1014,7 @@
     .shoot-grid { grid-template-columns: 1fr 1fr; }
     .shoot-grid figure:last-child { grid-column: 1 / -1; aspect-ratio: 4 / 3; }
     .hero { padding-top: 80px; }
-    .hero-proof { font-size: 10.5px; }
+    .hero-proof { font-size: 12px; }
   }
   /* Hero order from the Hudson call (12 Oct 2026): headline, two-line sub, video, then the call to action */
   .hero-cta { width: 100%; max-width: 820px; display: flex; flex-direction: column; align-items: center; gap: 14px; }
@@ -1058,13 +1056,13 @@
   .reel-views {
     position: absolute; right: 8px; top: 8px; pointer-events: none;
     background: rgba(10,10,10,0.78); color: var(--gold); border-radius: 5px; padding: 4px 7px;
-    font-family: 'Courier New', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.04em;
+    font-family: 'Courier New', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.04em;
   }
   .reel figcaption {
     font-family: Arial, sans-serif; font-size: 12.5px; color: var(--grey); line-height: 1.45; margin-top: 8px;
   }
   .reel figcaption strong { color: var(--white); font-weight: 700; }
-  .reel-tag { display: inline-block; margin-left: 4px; padding: 1px 6px; border: 1px solid var(--gold); border-radius: 4px; color: var(--gold); font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; vertical-align: 1px; }
+  .reel-tag { display: inline-block; margin-left: 4px; padding: 1px 6px; border: 1px solid var(--gold); border-radius: 4px; color: var(--gold); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; vertical-align: 1px; }
   .reels-more { text-align: center; margin-top: 18px; }
   .reels-more a {
     display: inline-block; font-family: Arial, sans-serif; font-size: 13px; font-weight: 700; color: var(--gold);
@@ -1175,20 +1173,95 @@
   .s-about img { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 2px solid var(--gold); }
   .s-about p { font-size: 24px; line-height: 1.45; color: var(--white); margin: 0; }
   .s-book-btn { margin-bottom: 24px; }
+  @media (max-width: 767px) { .s-book-desktop { display: none; } }
   .s-cal { position: relative; min-height: 700px; }
   .s-cal iframe { position: relative; z-index: 1; }
   .s-cal-loading { position: absolute; top: 50%; left: 0; right: 0; text-align: center; font-family: Arial, sans-serif; font-size: 18px; color: #bdbdbd; margin: 0; z-index: 0; }
   .s-cal-fallback { text-align: center; font-family: Arial, sans-serif; font-size: 17px; color: #cfcfcf; margin: 14px 0 0; }
   .s-cal-fallback a { color: var(--gold); }
   @media (max-width: 760px) { .s-about { flex-direction: column; text-align: center; } .s-about p { font-size: 21px; } .s-cal { min-height: 820px; } }
+
+  /* Polish batch (Oct 2026): fonts, readability, tap targets, menu, phone booking */
+  @font-face { font-family: 'Anton'; font-style: normal; font-weight: 400; font-display: swap; src: url('/assets/fonts/anton-wordmark.woff2') format('woff2'); unicode-range: U+43-45, U+47-49, U+4e-50, U+52-55, U+57; }
+  /* Same header everywhere: logo left, links right, hamburger under 1100px */
+  nav { background: rgba(10,10,10,0.96); }
+  nav:has(.nav-links.active) { background: #0A0A0A; }
+  nav .nav-links a { min-height: 44px; display: inline-flex; align-items: center; font-size: 14px; }
+  .hamburger { min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
+  @media (max-width: 1100px) {
+    nav .nav-links { background: #0A0A0A !important; padding-bottom: 14px; }
+    nav .nav-links a { display: flex; padding: 0 4px; font-size: 16px; }
+    nav .nav-links a.nav-cta { justify-content: center; }
+  }
+  footer a { padding: 12px 2px; min-height: 44px; }
+  footer .footer-abn { width: 100%; }
+  .faq-q, .s-faq summary { min-height: 44px; }
+  /* Readable text on cream cards */
+  .tier .tier-period, .tier .tier-start, .tier .tier-name { color: #555; }
+  .tier .tier-list li { color: #333; }
+  .tier .btn-secondary { color: #0A0A0A; border-color: #0A0A0A; }
+  /* Hook-first explainer */
+  .hook-note { font-family: Arial, sans-serif; font-size: 17px; line-height: 1.55; color: #cfcfcf; text-align: center; max-width: 560px; margin: 8px auto 0; }
+  /* Booking: big button on phones, embed on desktop */
+  .cal-mobile { display: none; text-align: center; margin: 8px 0 6px; }
+  .cal-mobile .btn-primary { display: block; width: 100%; font-size: 18px; padding: 20px 24px; text-align: center; }
+  .cal-mobile p { font-family: Arial, sans-serif; font-size: 16px; color: #cfcfcf; margin-top: 10px; }
+  @media (max-width: 767px) {
+    .cal-embed, .s-cal-fallback { display: none !important; }
+    .cal-mobile { display: block; }
+  }
+  /* Lighter hero photo */
+  .hero { background: linear-gradient(180deg, rgba(10,10,10,0.84) 0%, rgba(10,10,10,0.9) 55%, #0D0D0D 100%), url("/assets/img/hero-bamboo-set-1400.webp") center top / cover no-repeat, #0D0D0D; }
+  @media (max-width: 800px) { .hero { background: linear-gradient(180deg, rgba(10,10,10,0.84) 0%, rgba(10,10,10,0.9) 55%, #0D0D0D 100%), url("/assets/img/hero-bamboo-set-800.webp") center top / cover no-repeat, #0D0D0D; } }
+  .legal { max-width: 760px; margin: 0 auto; padding: 120px 22px 60px; }
+  .legal h1 { font-size: 40px; margin-bottom: 6px; }
+  .legal h2 { font-size: 22px; margin: 28px 0 8px; }
+  .legal p, .legal li { font-family: Arial, sans-serif; font-size: 17px; line-height: 1.7; color: #d6d6d6; }
+  .legal ul { padding-left: 20px; }
+  .legal a { color: var(--gold); }
+  .legal .flag { color: #f0c36d; }
+  .form-card .btn-secondary { color: #333; border-color: #555; }
+  .form-card .cal-mobile p { color: #555; }
+  .wordmark { min-height: 44px; justify-content: center; }
+  .proof-strip a, .form-dm a { display: inline-flex; align-items: center; min-height: 44px; }
 </style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "LocalBusiness",
+ "name": "Edge Within Productions",
+ "description": "Mobile video podcast production. I bring 4K cameras, lights and mics to you, then edit, cut clips and publish.",
+ "url": "https://edgewithinproductions.com/",
+ "image": "https://edgewithinproductions.com/og-image.jpg",
+ "email": "mat@edgewithinproductions.com",
+ "founder": {
+  "@type": "Person",
+  "name": "Mat Davenport"
+ },
+ "areaServed": [
+  "Byron Bay",
+  "Northern Rivers, NSW"
+ ],
+ "address": {
+  "@type": "PostalAddress",
+  "addressRegion": "NSW",
+  "addressCountry": "AU"
+ },
+ "priceRange": "A$750 to A$3,300",
+ "sameAs": [
+  "https://www.instagram.com/edgewithinpodcast/",
+  "https://www.youtube.com/@EdgeWithinPodcast",
+  "https://open.spotify.com/show/6EJ2PRRlHMxoWW7Hct9iEs"
+ ]
+}
+</script>
 </head>
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
 
 <nav aria-label="Main">
-  <a href="/" class="wordmark" aria-label="Edge Within Productions" translate="no"><span class="wm-word" aria-hidden="true"><span class="wm-edge">EDGE</span><span class="wm-within">WITHIN</span></span><span class="wm-sub" aria-hidden="true">PRODUCTIONS</span></a>
+  <a href="/" class="wordmark" aria-label="Edge Within Productions, home" translate="no"><span class="wm-word" aria-hidden="true"><span class="wm-edge">EDGE</span><span class="wm-within">WITHIN</span></span><span class="wm-sub" aria-hidden="true">PRODUCTIONS</span></a>
   <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
     <span></span><span></span><span></span>
   </button>
@@ -1222,6 +1295,7 @@
 <section class="section reels-section" id="clips">
   <div class="section-header center">
     <h2>Clips like these, from every shoot.</h2>
+    <p class="hook-note">Hook-first means each clip opens on the line that makes people stop scrolling.</p>
   </div>
   </div>
   <div class="reels-row" role="list">
@@ -1322,8 +1396,12 @@
   <div class="s-wrap">
     <h2>Book a time</h2>
     <p class="s-lead">Pick a time for a free 30 minute call.</p>
-    <div class="s-btns s-book-btn"><a href="https://calendly.com/mjdaavenport/podcast-production-chat" target="_blank" rel="noopener" data-booking-link class="btn-primary">Book a free 30 min call</a></div>
+    <div class="s-btns s-book-btn s-book-desktop"><a href="https://calendly.com/mjdaavenport/podcast-production-chat" target="_blank" rel="noopener" data-booking-link class="btn-primary">Book a free 30 min call</a></div>
     <!-- Creator Session deposits: add a Stripe payment link here once set up. -->
+    <div class="cal-mobile">
+        <a class="btn-primary" href="https://calendly.com/mjdaavenport/podcast-production-chat" target="_blank" rel="noopener">Pick a time</a>
+        <p>Opens Calendly in a new tab. Free 30 minute call.</p>
+      </div>
     <div class="cal-embed s-cal">
       <p class="s-cal-loading">Loading calendar...</p>
       <iframe src="https://calendly.com/mjdaavenport/podcast-production-chat?hide_gdpr_banner=1&amp;background_color=141414&amp;text_color=f0f0f0&amp;primary_color=b8860b" title="Book a time with Mat on Calendly" loading="lazy"></iframe>
@@ -1339,8 +1417,8 @@
 <section class="s-sec" id="faq">
   <div class="s-wrap s-faq">
     <h2>Questions</h2>
-    <details><summary>Where do you film?</summary><p>At my set, or your place within 50km of Byron Bay. Further is fine, with travel charged.</p></details>
-    <details><summary>How do I pay?</summary><p>Creator Sessions are paid in full when you book. Everything else is a 50% deposit, balance on delivery.</p></details>
+    <details><summary>Where do you film?</summary><p>At my set, or your place. On location means within 50km of Byron Bay. Beyond that I travel anywhere in Australia, with travel quoted per job.</p></details>
+    <details><summary>How do I pay?</summary><p>Creator Sessions are paid upfront. Bigger packages take a 50% deposit, with the balance on delivery.</p></details>
     <details><summary>How fast do I get it back?</summary><p>First cut within 7 days of recording.</p></details>
     <details><summary>Who owns the content?</summary><p>You do. Full ownership of the final content stays with you.</p></details>
     <details><summary>Can you interview me?</summary><p>Yes. I can host and bring the questions, so you just talk.</p></details>
@@ -1362,8 +1440,10 @@
     <a href="https://buymeacoffee.com/edgewithin" target="_blank" rel="noopener">Support the show</a> ·
     <a href="mailto:mat@edgewithinproductions.com">mat@edgewithinproductions.com</a> ·
     <a href="https://www.instagram.com/edgewithinpodcast/" target="_blank" rel="noopener">Instagram</a> ·
+    <a href="/terms/">Terms</a> ·
     <a href="/privacy/">Privacy</a>
   </p>
+  <p class="footer-abn">Edge Within Productions · ABN 80 950 408 759</p>
 </footer>
 
 <a href="https://calendly.com/mjdaavenport/podcast-production-chat" target="_blank" rel="noopener" data-booking-link class="mobile-cta">Book a call</a>
