@@ -151,3 +151,20 @@ details.reveal-more > summary:hover { background: rgba(184,134,11,0.12); }
   .hiw-photos { grid-template-columns: 1fr; gap: 12px; margin-top: 40px; }
 }
 @media print { .js .reveal { opacity: 1 !important; transform: none !important; } }
+
+/* Creators: two cards share one row structure, lists ruled with hairlines so the shorter list spreads evenly */
+@media (min-width: 861px) {
+  .cs-grid { display: grid !important; grid-template-columns: repeat(2, minmax(0, 360px)); justify-content: center; gap: 24px; grid-template-rows: auto auto auto auto 1fr auto; }
+  .cs-grid > .tier { display: grid !important; grid-row: span 6; grid-template-rows: subgrid; max-width: none !important; row-gap: 0; }
+  .cs-grid .tier-list { display: flex; flex-direction: column; justify-content: space-between; margin-bottom: 24px; }
+  .cs-grid .tier-foot { min-height: 0 !important; margin-top: 0; justify-content: flex-start; }
+}
+.cs-grid .tier-list li { padding-top: 10px; padding-bottom: 10px; margin: 0; border-bottom: 1px solid rgba(26,23,18,0.10); }
+.cs-grid .tier-list li:last-child { border-bottom: 0; }
+.cs-grid .tier-list { gap: 0 !important; }
+.cs-grid .tier-list li::before { top: 19px; }
+@media (min-width: 861px) {
+  .cs-grid .tier-list { justify-content: flex-start; }
+  .cs-grid .tier-list li { flex: 1 1 auto; display: flex; align-items: center; }
+  .cs-grid .tier-list li::before { top: 50%; transform: translateY(-50%); }
+}
