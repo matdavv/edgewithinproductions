@@ -1265,6 +1265,31 @@
   .pay-note a { color: var(--gold); display: inline-flex; align-items: center; min-height: 44px; }
   .tier .pay-note a { color: #6b4f00; }
   @media (max-width: 600px) { .pay-pair { grid-template-columns: 1fr; } }
+
+  /* Design polish (Oct 2026): centred card groups, premium testimonials */
+  .pricing-grid { display: flex !important; flex-wrap: wrap; justify-content: center; align-items: stretch; gap: 20px; max-width: 1120px; margin-left: auto; margin-right: auto; }
+  .pricing-grid > .tier { flex: 1 1 300px; max-width: 360px; padding: 32px 28px; position: relative; }
+  .pricing-grid > .tier > .btn-primary:last-child, .pricing-grid > .tier > .btn-secondary:last-child, .pricing-grid > .tier > .pay-pair { margin-top: auto; }
+  .tier .tier-list { flex: 1; margin-bottom: 24px; gap: 11px; }
+  .tier .tier-list li { line-height: 1.5; }
+  .tier .tier-price { font-size: 40px; letter-spacing: -0.01em; margin: 6px 0 6px; }
+  .tier .tier-period { font-size: 14px; color: #555; }
+  .tier .tier-total { margin: 10px 0 18px; }
+  .tier .tier-badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); white-space: nowrap; }
+  .tier-end { margin-top: auto; }
+  .s-paths { max-width: 860px; margin: 0 auto; }
+  .s-card { display: flex; flex-direction: column; }
+  .s-card .s-go { margin-top: auto; }
+  /* Testimonials */
+  .testimonial-pair, .s-quotes { align-items: stretch; }
+  .testimonial-card, .s-quote { position: relative; display: flex; flex-direction: column; padding: 34px 30px 26px !important; }
+  .testimonial-card::before, .s-quote::before { content: '\201C'; position: absolute; top: 6px; left: 22px; font-family: Georgia, serif; font-size: 72px; line-height: 1; color: var(--gold); opacity: 0.35; pointer-events: none; }
+  .testimonial-card blockquote, .s-quote blockquote { font-size: 19px !important; line-height: 1.6 !important; margin: 14px 0 22px !important; position: relative; }
+  .testimonial-card figcaption, .s-quote figcaption { margin-top: auto; padding-top: 16px; border-top: 1px solid rgba(184,134,11,0.35); display: flex; flex-direction: column; gap: 4px; }
+  .t-name { font-family: Arial, sans-serif; font-size: 17px; font-weight: 700; color: #f5f1e8; }
+  .t-role { font-family: Arial, sans-serif; font-size: 15px; line-height: 1.45; color: var(--gold); }
+  .testimonial-card .case-link--card { margin-top: 12px; }
+  @media (max-width: 860px) { .testimonial-card, .s-quote { height: auto; } .testimonial-card blockquote, .s-quote blockquote { font-size: 18px !important; } }
 </style>
 <script type="application/ld+json">
 {
@@ -1431,11 +1456,11 @@
     <div class="s-quotes">
       <figure class="s-quote">
         <blockquote>&ldquo;Working with Mat has given me the support and guidance I have needed to bring a dream to life. He was respectful and inspiring of my unique vision and made me feel more confident. Eternally grateful and keen to continue creating together!&rdquo;</blockquote>
-        <figcaption>Montana Lower, InBluem</figcaption>
+        <figcaption><span class="t-name">Montana Lower</span><span class="t-role">InBluem</span></figcaption>
       </figure>
       <figure class="s-quote">
         <blockquote>&ldquo;Mat has supported and co-created at two of my house concerts and set up a mini podcast room during the night's festivities. He brings everything: his gear, his lighting, his whole setup. … He offers a few tiered options that fit my budget easily, and honestly, for the value he provides, it was the easiest yes I've made.&rdquo;</blockquote>
-        <figcaption>Dan Ingram, musician and community organiser</figcaption>
+        <figcaption><span class="t-name">Dan Ingram</span><span class="t-role">Musician, vocal coach, yoga and movement teacher, and community organiser</span></figcaption>
       </figure>
     </div>
     <p class="case-link"><a href="/inbluem/">Read how I produced InBluem, start to finish &rarr;</a></p>
