@@ -1120,6 +1120,57 @@
   .audience-links { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin:6px 0 18px; }
   .audience-links .btn-secondary { color: var(--gold); border-color: rgba(184,134,11,0.6); padding:10px 18px; font-size:12px; letter-spacing:0.04em; text-transform:uppercase; }
   .audience-links .btn-secondary:hover { color: var(--white); border-color: var(--gold); }
+
+  /* Simple homepage (Oct 2026) */
+  .s-wrap { max-width: 1040px; margin: 0 auto; padding: 0 22px; }
+  .s-sec { padding: 72px 0; }
+  .s-sec h2 { font-size: clamp(30px, 5vw, 44px); line-height: 1.15; text-align: center; margin: 0 0 14px; }
+  .s-lead { font-family: Arial, sans-serif; font-size: 18px; line-height: 1.6; color: #cfcfcf; text-align: center; max-width: 560px; margin: 0 auto 34px; }
+  .s-hero { padding: 130px 0 64px; text-align: center; }
+  .s-hero h1 { font-size: clamp(40px, 7vw, 72px); line-height: 1.05; margin: 0 0 18px; }
+  .s-hero .s-lead { margin-bottom: 28px; font-size: 19px; color: #e6e6e6; }
+  .s-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .s-btns a { font-size: 15px; padding: 16px 24px; }
+  .s-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; text-align: center; margin-top: 48px; }
+  .s-stat b { display: block; font-family: Arial, sans-serif; font-size: clamp(34px, 6vw, 52px); color: var(--gold); line-height: 1; }
+  .s-stat span { display: block; font-family: Arial, sans-serif; font-size: 16px; color: #d6d6d6; margin-top: 8px; }
+  .s-paths { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .s-card { display: block; background: #141414; border: 1px solid #2a2a2a; border-radius: 14px; padding: 30px 26px; text-decoration: none; color: var(--white); transition: border-color .2s; }
+  .s-card:hover { border-color: var(--gold); }
+  .s-card h3 { font-size: 28px; margin: 0 0 6px; }
+  .s-card .s-price { font-family: Arial, sans-serif; font-size: 20px; color: var(--gold); font-weight: 700; margin: 0 0 10px; }
+  .s-card p { font-family: Arial, sans-serif; font-size: 17px; line-height: 1.55; color: #cfcfcf; margin: 0 0 18px; }
+  .s-card .s-go { font-family: Arial, sans-serif; font-size: 16px; font-weight: 700; color: var(--gold); }
+  .s-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; list-style: none; padding: 0; margin: 0; counter-reset: st; }
+  .s-steps li { background: #141414; border: 1px solid #2a2a2a; border-radius: 14px; padding: 26px; font-family: Arial, sans-serif; font-size: 17px; line-height: 1.55; color: #cfcfcf; }
+  .s-steps li b { display: block; font-size: 21px; color: var(--white); margin-bottom: 6px; }
+  .s-steps li b::before { counter-increment: st; content: counter(st) ". "; color: var(--gold); }
+  .s-quotes { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .s-quote { margin: 0; background: #141414; border: 1px solid #2a2a2a; border-radius: 14px; padding: 28px; }
+  .s-quote blockquote { margin: 0 0 14px; font-size: 20px; line-height: 1.5; font-style: italic; color: var(--white); }
+  .s-quote figcaption { font-family: Arial, sans-serif; font-size: 16px; color: var(--gold); }
+  .s-book .cal-embed { max-width: 900px; margin: 0 auto; }
+  .s-book .dm-row a, .s-btns .btn-secondary { font-size: 15px; color: #f0f0f0; border-color: #555; }
+  .s-faq { max-width: 720px; margin: 0 auto; }
+  .s-faq details { border-bottom: 1px solid #2a2a2a; padding: 18px 0; }
+  .s-faq summary { cursor: pointer; font-family: Arial, sans-serif; font-size: 18px; font-weight: 700; color: var(--white); list-style: none; }
+  .s-faq summary::-webkit-details-marker { display: none; }
+  .s-faq summary::after { content: '+'; float: right; color: var(--gold); }
+  .s-faq details[open] summary::after { content: '\2212'; }
+  .s-faq p { font-family: Arial, sans-serif; font-size: 17px; line-height: 1.6; color: #cfcfcf; margin: 10px 0 0; }
+  .reels-section .section-header h2 { font-size: clamp(30px, 5vw, 44px); }
+  .reel figcaption { font-size: 15px !important; }
+  .reel-views { font-size: 14px !important; }
+  .reel-tag { font-size: 13px !important; }
+  .mobile-cta { font-size: 16px !important; }
+  footer, footer p, footer a { font-size: 15px !important; }
+  @media (max-width: 760px) {
+    .s-paths, .s-steps, .s-quotes { grid-template-columns: 1fr; }
+    .s-sec { padding: 56px 0; }
+    .s-stats { gap: 8px; }
+    .s-stat span { font-size: 15px; }
+    .s-btns a { width: 100%; text-align: center; box-sizing: border-box; }
+  }
 </style>
 </head>
 <body>
@@ -1142,115 +1193,27 @@
 
 <main id="main">
 
-<section class="hero" id="top">
-  <div class="hero-copy">
-    <div class="eyebrow">Mobile video podcast production</div>
-    <h1>
-      I bring the studio.<br>
-      <em>You bring the story.</em>
-    </h1>
-    <p class="hero-sub">
-      Video podcasts for Northern Rivers founders and creators.
-      Episode plus 8 clips, first cut in <span class="nowrap"><span data-turnaround>7</span> days</span>.
-    </p>
-    <p class="hero-sub hero-sub--kit">4K cameras, lights and mics, set up at your place.</p>
-  </div>
-
-  <div class="showreel-wrap">
-    <!-- TODO (Hudson call, 12 Oct 2026): swap this for the 5 to 10 minute sales video (VSL) once it's filmed:
-         Mat explaining the offer, behind-the-scenes setup, snippets of shoots. Then move the Inbluem episode
-         down into the clips section. -->
-    <div class="showreel">
-      <!-- Click-to-load facade: the YouTube player (about 1 MB) only loads when someone presses play. -->
-      <a class="yt-facade" href="https://www.youtube.com/watch?v=vvOc_aE6_3o&amp;t=4s"
-         data-yt-id="vvOc_aE6_3o" data-yt-start="4"
-         data-yt-title="In Bloom episode produced for Montana Lower by Edge Within"
-         aria-label="Play video: In Bloom episode produced for Montana Lower by Edge Within">
-        <img src="https://i.ytimg.com/vi/vvOc_aE6_3o/hqdefault.jpg"
-             srcset="https://i.ytimg.com/vi/vvOc_aE6_3o/hqdefault.jpg 480w, https://i.ytimg.com/vi/vvOc_aE6_3o/sddefault.jpg 640w, https://i.ytimg.com/vi/vvOc_aE6_3o/maxresdefault.jpg 1280w"
-             sizes="(max-width: 940px) 100vw, 900px"
-             alt="Thumbnail of the In Bloom podcast episode produced for Montana Lower by Edge Within" width="1280" height="720" decoding="async">
-        <span class="yt-play" aria-hidden="true"><svg viewBox="0 0 68 48" width="72" height="51" focusable="false"><path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.2.3 34 .3 34 .3S12.8.3 7.5 1.7a8.5 8.5 0 0 0-6 6C.1 13 .1 24 .1 24s0 11 1.4 16.3a8.5 8.5 0 0 0 6 6c5.3 1.4 26.5 1.4 26.5 1.4s21.2 0 26.5-1.4a8.5 8.5 0 0 0 6-6c1.4-5.3 1.4-16.3 1.4-16.3s0-11-1.4-16.3z" fill="#b8860b"/><path d="M27 34V14l18 10z" fill="#0A0A0A"/></svg></span>
-      </a>
-    </div>
-    <!-- Montana Lower's Inbluem episode (youtube.com/watch?v=vvOc_aE6_3o), starts at 0:04. -->
-    <p class="showreel-caption">Produced for Montana Lower (Inbluem), my first production client.</p>
-  </div>
-
-  <div class="hero-cta">
-    <div class="hero-btns">
-      <a href="#book" class="btn-primary" data-package="creator">Book a Creator Session</a>
+<section class="hero s-hero" id="top">
+  <div class="s-wrap">
+    <h1>I bring the studio.<br><em>You bring the story.</em></h1>
+    <p class="s-lead">Video podcasts for Northern Rivers founders and creators. Episode plus 8 clips, first cut in 7 days.</p>
+    <div class="s-btns">
+      <a href="#book" class="btn-primary">Book a Creator Session</a>
       <a href="https://calendly.com/mjdaavenport/podcast-production-chat" target="_blank" rel="noopener" data-booking-link class="btn-secondary">Book a free 30 min call</a>
     </div>
-    <p class="hero-call-note">A 30-minute chat to see if we're a good fit for each other. No pressure. If it's not right, you've lost nothing.</p>
-    <div class="pill">Clips from A$750 · Full episode A$1,900<span class="pill-loc">Byron Bay &amp; Northern Rivers</span></div>
-    <p class="hero-proof">21 episodes shipped · 3.7M Reels views in 90 days · $0 on ads</p>
-  </div>
-
-<div class="testimonial-pair">
-  <!-- Testimonial: Montana Lower (Inbluem), approved by Mat 29 Sep 2026. -->
-  <figure class="testimonial-card testimonial-card--hero">
-    <blockquote class="testimonial">&ldquo;Working with Mat gave me the support and guidance I needed to bring a dream to life. He handled everything from filming and editing to clips and getting my show live on Spotify and Apple. He respected and inspired my unique vision, and he made me feel so much more confident. I&rsquo;m eternally grateful and keen to keep creating together!&rdquo;</blockquote>
-    <figcaption class="testimonial-cite">Montana, host of In Bloom (Inbluem)</figcaption>
-  </figure>
-  <!-- Testimonial: Dan Ingram, approved by Mat 23 Oct 2026 (lightly trimmed). -->
-  <figure class="testimonial-card testimonial-card--hero">
-    <blockquote class="testimonial">&ldquo;Mat has co-created at two of my house concerts, setting up a mini podcast room during the night. He brings everything: gear, lighting, the whole setup. He made my guests feel safe to open up and share their truth. No ego, as real as it gets. Then he edits it with mastery, back to me quickly, as content I could actually use to build excitement around my events and business. The easiest yes I&rsquo;ve made.&rdquo;</blockquote>
-    <figcaption class="testimonial-cite">Dan Ingram, Musician, vocal coach, yoga and movement teacher, community organiser</figcaption>
-  </figure>
-</div>
-
-  <div class="proof-strip">
-    <div>
-      <div class="eyebrow">Proof of work</div>
-      <h2>Same system behind Edge Within.</h2>
-      <p>
-        I've built my own show in public since January 2026, with zero paid ads.
-        The production I run for the podcast is the production I run for clients.
-      </p>
-      <p>
-        <a href="https://open.spotify.com/show/6EJ2PRRlHMxoWW7Hct9iEs" target="_blank" rel="noopener">Spotify →</a>
-        &nbsp;·&nbsp;
-        <a href="https://www.youtube.com/@EdgeWithinPodcast" target="_blank" rel="noopener">YouTube →</a>
-        &nbsp;·&nbsp;
-        <a href="https://www.instagram.com/edgewithinpodcast/" target="_blank" rel="noopener">Instagram →</a>
-      </p>
-    </div>
-    <!-- Source: Instagram Insights, 90 days to 4 Oct 2026: 22,963 followers, 3.7M Reels views, +10,696 net new followers, 342,887 interactions. -->
-    <div class="proof-metrics">
-      <div class="proof-metric">
-        <div class="v">3.7M</div>
-        <div class="l">Reels views in 90 days (Oct 2026)</div>
-      </div>
-      <div class="proof-metric">
-        <div class="v">23K</div>
-        <div class="l">Instagram followers</div>
-      </div>
-      <div class="proof-metric">
-        <div class="v">+10.7K</div>
-        <div class="l">Net new followers in 90 days (Oct 2026)</div>
-      </div>
-      <div class="proof-metric">
-        <div class="v">343K</div>
-        <div class="l">Interactions in 90 days (Oct 2026)</div>
-      </div>
-      <div class="proof-metric">
-        <div class="v">$0</div>
-        <div class="l">Spent on ads</div>
-      </div>
-      <div class="proof-metric">
-        <div class="v">21</div>
-        <div class="l">Episodes shipped</div>
-      </div>
+    <div class="s-stats">
+      <div class="s-stat"><b>21</b><span>episodes shipped</span></div>
+      <div class="s-stat"><b>3.7M</b><span>Reels views in 90 days</span></div>
+      <div class="s-stat"><b>$0</b><span>spent on ads</span></div>
     </div>
   </div>
 </section>
 
 <section class="section reels-section" id="clips">
   <div class="section-header center">
-    <div class="eyebrow">Clips from the show</div>
+    <h2>Clips like these, from every shoot.</h2>
+  </div>
     <h2>Every episode comes with <em>clips like these</em>.</h2>
-    <p>Filmed and cut with the same kit and system I bring to your shoot.</p>
   </div>
   <div class="reels-row" role="list">
       <figure class="reel">
@@ -1296,431 +1259,79 @@
         <figcaption><strong>Tom Horne</strong> · Men Crying</figcaption>
       </figure>
   </div>
-  <p class="reels-hint" aria-hidden="true">Swipe for more →</p>
-  <p class="reels-more"><a href="https://www.instagram.com/edgewithinpodcast/" target="_blank" rel="noopener">See more clips on Instagram →</a></p>
+  <p class="reels-more"></p>
 </section>
 
-<section class="section" id="who">
-  <div class="section-header center">
-    <div class="eyebrow">Who this is for</div>
-    <h2>A real show without<br>another content chore.</h2>
-    <p>You know a podcast would work for your brand. You don't have the time to produce one at a standard you're proud of. I handle the production so you can focus on the conversation.</p>
-  </div>
-  <div class="audience-grid">
-    <div class="audience-card">
-      <h3>Founders &amp; CEOs</h3>
-      <p>Build authority with deep conversations that show how you think, not just what you sell.</p>
-    </div>
-    <div class="audience-card">
-      <h3>Personal brands</h3>
-      <p>Stay present on Reels, Shorts, and long-form without burning out on production logistics.</p>
-    </div>
-    <div class="audience-card">
-      <h3>Mission-led businesses</h3>
-      <p>Document culture, community, and story in a format that compounds over a run, not a one-off shoot.</p>
+<section class="s-sec" id="paths">
+  <div class="s-wrap">
+    <h2>Choose your path</h2>
+    <div class="s-paths">
+      <a class="s-card" href="/creators/">
+        <h3>Creators</h3>
+        <p class="s-price">From A$750</p>
+        <p>One morning of filming, 5 hook-first clips.</p>
+        <span class="s-go">See creator options &rarr;</span>
+      </a>
+      <a class="s-card" href="/business/">
+        <h3>Business</h3>
+        <p class="s-price">From A$1,900</p>
+        <p>A full video podcast episode with 8 clips, done for you.</p>
+        <span class="s-go">See business options &rarr;</span>
+      </a>
     </div>
   </div>
 </section>
 
-
-<section class="section" id="compare">
-  <div class="section-header center">
-    <div class="eyebrow">The difference</div>
-    <h2>Studio or me?</h2>
+<section class="s-sec" id="how-it-works">
+  <div class="s-wrap">
+    <h2>How it works</h2>
+    <ol class="s-steps">
+      <li><b>We record</b>I set up cameras, lights and mics at your place.</li>
+      <li><b>I edit</b>Full episode and hook-first clips, colour graded.</li>
+      <li><b>You post</b>First cut back within <span data-turnaround>7</span> days.</li>
+    </ol>
   </div>
-  <div class="compare-wrap">
-    <div class="compare-table" role="table" aria-label="Studio versus Edge Within">
-      <div class="compare-row compare-head" role="row">
-        <div class="compare-label" role="columnheader"><span class="sr-only">Topic</span></div>
-        <div class="compare-studio" role="columnheader">A studio</div>
-        <div class="compare-ew" role="columnheader">Edge Within</div>
-      </div>
-      <div class="compare-row" role="row">
-        <div class="compare-label" role="rowheader">Where you record</div>
-        <div class="compare-studio" role="cell">Their room, on one of their sets</div>
-        <div class="compare-ew" role="cell">Your place, your land, or somewhere outdoors that feels like you</div>
-      </div>
-      <div class="compare-row" role="row">
-        <div class="compare-label" role="rowheader">Who's in the room</div>
-        <div class="compare-studio" role="cell">A producer who presses record</div>
-        <div class="compare-ew" role="cell">A host who interviews you or helps you lead</div>
-      </div>
-      <div class="compare-row" role="row">
-        <div class="compare-label" role="rowheader">Who edits</div>
-        <div class="compare-studio" role="cell">Whoever's on shift</div>
-        <div class="compare-ew" role="cell">The same person who was there for the conversation</div>
-      </div>
-      <div class="compare-row" role="row">
-        <div class="compare-label" role="rowheader">Proof it works</div>
-        <div class="compare-studio" role="cell">A showreel</div>
-        <div class="compare-ew" role="cell">My own show: 3.7M Reels views in 90 days with no ads</div>
-      </div>
-    </div>
-  </div>
-  <p class="compare-close">If you just need a room and a camera, a studio will be cheaper. If you want a show that sounds like you and looks like your world, that's what I do.</p>
 </section>
 
-<section class="section" id="how-it-works">
-  <div class="section-header center">
-    <div class="eyebrow">How it works</div>
-    <h2>From record day to <em>ready to publish</em>.</h2>
-    <p>First cut of your full episode and clips within <span data-turnaround>7</span> days of recording.</p>
-  </div>
-
-  <div class="shoot-photos" aria-label="How we shoot">
-    <h3 class="shoot-photos-title">How we shoot</h3>
-    <div class="shoot-grid">
-      <figure><picture><source srcset="assets/img/garden-shoot.webp" type="image/webp"><img src="assets/img/garden-shoot.jpg" width="1050" height="1400" loading="lazy" decoding="async" alt="Two people recording a podcast at an outdoor table in a garden, lit by two softbox lights"></picture></figure>
-      <figure><picture><source srcset="assets/img/deck-setup.webp" type="image/webp"><img src="assets/img/deck-setup.jpg" width="1050" height="1400" loading="lazy" decoding="async" alt="Podcast set on a covered timber deck with cameras on tripods and a round softbox light"></picture></figure>
-      <figure><picture><source srcset="assets/img/indoor-bts-mat.webp" type="image/webp"><img src="assets/img/indoor-bts-mat.jpg" width="1400" height="1050" loading="lazy" decoding="async" alt="Mat adjusting a 4K camera on a tripod while setting up an indoor podcast set"></picture></figure>
-    </div>
-  </div>
-
-  <div class="hiw-grid">
-  <div>
-  <ol class="timeline">
-    <li class="tl-step">
-      <div class="phase-num" aria-hidden="true">1</div>
-      <div class="tl-card">
-        <div class="tl-when">On the day</div>
-        <h3>Record day</h3>
-        <p>I guide the conversation so you can relax into it.</p>
-      </div>
-    </li>
-    <li class="tl-step">
-      <div class="phase-num" aria-hidden="true">2</div>
-      <div class="tl-card">
-        <div class="tl-when">Next</div>
-        <h3>Edit</h3>
-        <p>Your full episode, edited multicam and colour graded.</p>
-      </div>
-    </li>
-    <li class="tl-step">
-      <div class="phase-num" aria-hidden="true">3</div>
-      <div class="tl-card">
-        <div class="tl-when">Next</div>
-        <h3>Clips</h3>
-        <p>Hook-first short clips from your best moments.</p>
-      </div>
-    </li>
-    <li class="tl-step tl-step--launch">
-      <div class="phase-num" aria-hidden="true">4</div>
-      <div class="tl-card">
-        <div class="tl-when">Within <span data-turnaround>7</span> days</div>
-        <h3>First cut</h3>
-        <p>Titles, description, chapters and a custom episode thumbnail. Ready to publish.</p>
-      </div>
-    </li>
-  </ol>
-  </div>
-  <aside class="included-box hiw-side">
-    <h3>On site</h3>
-    <ul>
-      <li>Full 4K setup, lighting, premium mics. Same kit I use on Edge Within</li>
-      <li>Your place or a site we agree. Indoor or shaded outdoor</li>
-      <li>I interview you, with question ideas and prompts if you'd like them, or you host and I facilitate</li>
-      <li>Getting comfortable: optional breathwork before we record so you settle in and open up</li>
-      <li>Travel scoped per shoot</li>
-    </ul>
-  </aside>
-  </div>
-
-  <div class="included-grid">
-    <div class="included-box">
-      <h3>Every episode includes</h3>
-      <ul>
-        <li>Long-form edit with colour grading (multicam)</li>
-        <li>8 hook-first short-form clips</li>
-        <li>Custom episode thumbnail for Spotify and YouTube, plus titles, descriptions and chapters</li>
-        <li>Two rounds of revisions</li>
-        <li>Upload to Spotify, Apple Podcasts, and YouTube once you approve</li>
-      </ul>
-    </div>
-    <div class="included-box included-box--gold">
-      <h3>Hook-first clips</h3>
-      <p>Every clip is picked from the strongest, most shareable moments of your episode. Never chosen at random.</p>
-      <p>Each one opens on the line that makes people stop scrolling, so your best ideas reach new people.</p>
-      <p class="included-note">First cut of the full episode, clips and thumbnail within <span data-turnaround>7</span> days of recording.</p>
-    </div>
-  </div>
-  <p class="included-note" style="text-align:center; max-width:620px; margin:20px auto 0;">
-    Not in a podcast package: <a href="#addons" style="color:var(--gold); text-decoration:none; font-weight:600;">see add-ons</a> for extras, including extra revision rounds at A$125 an hour.
-  </p>
-</section>
-
-<section class="section" id="about">
-  <div class="about-grid">
-    <img class="about-photo" src="assets/img/mat-portrait.jpg" width="1600" height="844" loading="lazy" decoding="async" alt="Mat, host of the Edge Within podcast, talking to camera at a podcast mic">
-    <div>
-      <div class="eyebrow">About</div>
-      <h2>Hi, I'm Mat.</h2>
-      <p>I host the Edge Within podcast and have built it in public since January 2026, with zero paid ads. 21 episodes in, the production I run for my own show is the production I run for yours.</p>
-      <p>I'm a host, not just a camera operator, so I'm in the room for the conversation and I edit it myself.</p>
+<section class="s-sec" id="clients">
+  <div class="s-wrap">
+    <h2>What clients say</h2>
+    <div class="s-quotes">
+      <figure class="s-quote">
+        <blockquote>&ldquo;He handled everything from filming and editing to clips and getting my show live on Spotify and Apple. He made me feel so much more confident.&rdquo;</blockquote>
+        <figcaption>Montana, host of In Bloom (Inbluem)</figcaption>
+      </figure>
+      <figure class="s-quote">
+        <blockquote>&ldquo;He brings everything: gear, lighting, the whole setup. He made my guests feel safe to open up. Then he edits it with mastery, back to me quickly. The easiest yes I&rsquo;ve made.&rdquo;</blockquote>
+        <figcaption>Dan Ingram, musician and community organiser</figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
-<section class="section" id="clients">
-  <div class="section-header center">
-    <div class="eyebrow">Client work</div>
-    <h2>First client, start to finish.</h2>
-  </div>
-  <div class="client-grid client-grid--single">
-    <div class="client-card">
-      <h3>Montana Lower</h3>
-      <div class="client-meta">First client · Inbluem</div>
-      <ul>
-        <li>Travel to location and outdoor shoot</li>
-        <li>Optional breathwork and guidance before recording</li>
-        <li>Long-form edit and hook-first clips</li>
-        <li>Custom episode thumbnail</li>
-        <li>Titles, descriptions, and chapters</li>
-        <li>Show set up on Spotify and Apple Podcasts</li>
-      </ul>
-      <p class="client-result">Result: her show went live on Spotify and Apple, with clips ready to post.</p>
+<section class="s-sec s-book" id="book">
+  <div class="s-wrap">
+    <h2>Book a time</h2>
+    <p class="s-lead">Pick a slot for a free 30 minute call or your Creator Session.</p>
+    <!-- Creator Session deposits: add a Stripe payment link here once set up. -->
+    <div class="cal-embed">
+      <iframe src="https://calendly.com/mjdaavenport/podcast-production-chat?hide_gdpr_banner=1&amp;background_color=141414&amp;text_color=f0f0f0&amp;primary_color=b8860b" title="Book a time with Mat on Calendly" loading="lazy"></iframe>
     </div>
-
-  </div>
-</section>
-
-<section class="section-full" id="pricing">
-  <div class="section-inner">
-    <div class="section-header center">
-      <div class="eyebrow">Podcast packages</div>
-      <h2>Start with clips, or go all the way.</h2>
-      <p>Same kit and care at every level, from a morning of clips to a finished, published episode. A 50% deposit locks your shoot day.</p>
-      <p class="pilot-start">Not sure? Start with a Creator Session.</p>
-    </div>
-
-    <div class="pricing-grid">
-      <div class="tier">
-        <div class="tier-start">Starting point</div>
-        <div class="tier-name">Creator Session</div>
-        <div class="tier-price">A$750</div>
-        <div class="tier-period">at my set · A$1,050 on location</div>
-        <div class="tier-total">One morning, a week of clips</div>
-        <ul class="tier-list">
-          <li>One-hour recording, two matched 4K cameras and premium mics</li>
-          <li>Prepared questions and hook coaching before we roll</li>
-          <li>5 hook-first vertical clips with captions and music</li>
-          <li>First cut within 7 days, plus 1 round of revisions</li>
-          <li>Extra clips A$60 each</li>
-          <li>Paid in full when you book</li>
-        </ul>
-        <a href="#inquire" class="btn-primary" data-package="creator">Book a Creator Session</a>
-      </div>
-
-      <div class="tier featured">
-        <div class="tier-badge">Recommended</div>
-        <div class="tier-name">Full Episode</div>
-        <div class="tier-price">A$1,900</div>
-        <div class="tier-period">at my set · A$2,200 on location</div>
-        <div class="tier-total">Recorded, edited and published</div>
-        <ul class="tier-list">
-          <li>Everything in the Creator Session</li>
-          <li>8 hook-first clips instead of 5</li>
-          <li>Multicam long-form edit, colour graded, audio cleaned and mastered</li>
-          <li>Custom thumbnail, titles, description and chapters</li>
-          <li>Upload to YouTube, Spotify and Apple Podcasts once you approve</li>
-          <li>2 rounds of revisions</li>
-        </ul>
-        <a href="#inquire" class="btn-primary" data-package="full">Book a full episode</a>
-      </div>
-
-      <div class="tier">
-        <div class="tier-name">Series</div>
-        <div class="tier-price">A$1,750</div>
-        <div class="tier-period">per episode · 4 or more episodes</div>
-        <div class="tier-total">A$150 off every episode</div>
-        <ul class="tier-list">
-          <li>Everything in the Full Episode, for each episode</li>
-          <li>Batch-record when schedules align</li>
-          <li>Priority scheduling</li>
-          <li>Release support across the run</li>
-          <li>50% deposit before each shoot day</li>
-          <li>Location shoots +A$300 per shoot</li>
-        </ul>
-        <a href="#inquire" class="btn-primary" data-package="series">Book a series</a>
-      </div>
-    </div>
-
-    <div class="monthly-card">
-      <p><strong>Monthly plan: A$3,300 a month.</strong> 2 Full Episodes every month, 3-month minimum. Steady content without rebooking.</p>
-      <a href="#inquire" class="btn-secondary" data-package="monthly">Ask about a monthly plan</a>
-    </div>
-    <p class="value-note">
-      <strong>Production days from A$2,000.</strong> Multicam shoots on location for brand, corporate and travel work, with edits quoted per episode and gear hire and travel at cost. <a href="#inquire">Enquire on the form</a> or <a href="https://calendly.com/mjdaavenport/podcast-production-chat" target="_blank" rel="noopener" data-booking-link>book a call</a>.
-    </p>
-    <div class="audience-links">
-      <a href="/creators/" class="btn-secondary">For creators</a>
-      <a href="/business/" class="btn-secondary">For businesses</a>
-    </div>
-    <p class="price-note">All prices in AUD. No GST (not GST-registered). On location means your place or a spot we choose within 50km of Byron Bay; travel beyond that is charged.</p>
-
-    <div class="addons" id="addons">
-      <div class="addons-label">Add-ons</div>
-      <ul class="addons-list">
-        <li><strong>Extra clips</strong>Each clip is cut with the same care and finish as the Edge Within clips. Extra clips are A$60 each.</li>
-        <li><strong>Cinematic clips</strong>Everything a standard clip has, plus extra flair: bolder animated text, sharper pacing and more punch. A$75 per clip, or add A$25 to upgrade any included clip.</li>
-        <li><strong>Episode trailer</strong>A short trailer to launch or promote the episode. A$100.</li>
-        <li><strong>New show setup</strong>A$250 one-off. I set up your Spotify and Apple Podcasts listings. You supply logins and show details up front.</li>
-        <li><strong>Raw files</strong>All camera and audio files from your shoot, alongside any package. A$150.</li>
-        <li><strong>Paid ad usage</strong>Organic use on your own channels is always included. Running the content as paid ads adds 25%. Included with a Series, the monthly plan and production days.</li>
-        <li><strong>Extra revisions or extra work</strong>Revision rounds beyond those included, or any work outside the agreed scope. A$125 an hour.</li>
-        <li><strong>Travel</strong>Beyond 50km of Byron Bay. Charged per kilometre or at cost.</li>
-        <li><strong>Guest outreach</strong>Optional support if you want help booking.</li>
-        <li><strong>Social posting</strong>I can post your finished clips for you during release week.</li>
-      </ul>
+    <div class="dm-row">
+      <a class="btn-secondary" href="https://ig.me/m/edgewithinpodcast" target="_blank" rel="noopener">Message me on Instagram</a>
+      <a class="btn-secondary" href="mailto:mat@edgewithinproductions.com">Email Mat</a>
     </div>
   </div>
 </section>
 
-<div class="form-section" id="book">
-  <div class="form-inner">
-    <div class="form-card">
-      <div class="form-header">
-        <div class="eyebrow">Start here</div>
-        <h2>Tell me what you're building</h2>
-        <p>Book a quick call, or send the short form. I read every enquiry myself and reply within 24-48 hours by email or Instagram.</p>
-      </div>
-
-      <div class="book-card">
-        <div>
-          <h3>Book a 30-minute call</h3>
-          <p>No pitch. We talk through your idea and see if we're a good fit for each other. I don't take on every project, and if it's not right, you've lost nothing.</p>
-        </div>
-        <a id="bookingLink" class="btn-secondary" href="https://calendly.com/mjdaavenport/podcast-production-chat" target="_blank" rel="noopener" data-booking-link>Open in Calendly</a>
-      </div>
-      <!-- Inline booking. Creator Session deposits: add a Stripe payment link here once set up. -->
-      <div class="cal-embed">
-        <iframe src="https://calendly.com/mjdaavenport/podcast-production-chat?hide_gdpr_banner=1&amp;background_color=141414&amp;text_color=f0f0f0&amp;primary_color=b8860b" title="Book a time with Mat on Calendly" loading="lazy"></iframe>
-      </div>
-      <div class="dm-row">
-        <a class="btn-secondary" href="https://ig.me/m/edgewithinpodcast" target="_blank" rel="noopener">Message me on Instagram</a>
-        <a class="btn-secondary" href="mailto:mat@edgewithinproductions.com">Email Mat</a>
-      </div>
-
-      <p class="form-divider" id="inquire">or send the form</p>
-
-      <form id="inquireForm" action="https://formspree.io/f/xzdlvjrn" method="POST">
-        <div class="form-grid">
-          <div class="field full">
-            <label for="packageSelect">What do you want?</label>
-            <select name="package" id="packageSelect" required>
-              <option value="" disabled selected>Select one</option>
-              <option value="creator">Creator Session · from A$750</option>
-              <option value="full">Full Episode · from A$1,900</option>
-              <option value="series">Series · 4+ episodes · A$1,750/ep</option>
-              <option value="monthly">Monthly plan · A$3,300/month</option>
-              <option value="production">Production days · from A$2,000</option>
-              <option value="call">A quick call first</option>
-              <option value="not-sure">Not sure yet</option>
-            </select>
-          </div>
-
-          <div class="field full">
-            <label for="extra">What are you trying to make?</label>
-            <textarea name="extra" id="extra" required placeholder="e.g. Skincare brand. I want to host a 3-episode series."></textarea>
-          </div>
-
-          <div class="field">
-            <label for="name">Your name</label>
-            <input type="text" name="name" id="name" required placeholder="Your name" autocomplete="name">
-          </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required placeholder="you@email.com" autocomplete="email">
-          </div>
-          <div class="field">
-            <label for="location">Where are you based?</label>
-            <input type="text" name="location" id="location" required placeholder="City / region" autocomplete="address-level2">
-          </div>
-          <div class="field">
-            <label for="start_window">Rough timing (optional)</label>
-            <select name="start_window" id="start_window">
-              <option value="" selected>Select one</option>
-              <option value="asap">ASAP / next 2-3 weeks</option>
-              <option value="1_2_months">1-2 months</option>
-              <option value="exploring">Just exploring</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="brand">Brand or business (optional)</label>
-            <input type="text" name="brand" id="brand" placeholder="Brand / company" autocomplete="organization">
-          </div>
-          <div class="field">
-            <label for="handle">Instagram or website (optional)</label>
-            <input type="text" name="handle" id="handle" placeholder="@handle or URL">
-          </div>
-        </div>
-        <!-- Spam honeypot (Formspree ignores submissions where this is filled) -->
-        <div class="hp-field" aria-hidden="true">
-          <label for="gotcha">Leave this empty</label>
-          <input type="text" name="_gotcha" id="gotcha" tabindex="-1" autocomplete="off">
-        </div>
-        <input type="hidden" name="source_page" id="sourcePage" value="home">
-        <input type="hidden" name="_subject" value="New Production Enquiry - Edge Within">
-
-        <button type="submit" class="submit-btn">Send enquiry</button>
-        <p class="form-error" id="formError" role="alert">Something went wrong sending the form. Please email <a href="mailto:mat@edgewithinproductions.com">mat@edgewithinproductions.com</a> or DM <a href="https://ig.me/m/edgewithinpodcast" target="_blank" rel="noopener">@edgewithinpodcast</a>.</p>
-
-        <div class="form-dm">
-          Prefer to DM? <a href="https://ig.me/m/edgewithinpodcast" target="_blank" rel="noopener">@edgewithinpodcast on Instagram</a> · or <a href="mailto:mat@edgewithinproductions.com">mat@edgewithinproductions.com</a>
-        </div>
-
-        <div class="success-msg" id="successMsg" role="status" aria-live="polite" tabindex="-1">
-          <div class="check" aria-hidden="true">✓</div>
-          <h3>Enquiry received.</h3>
-          <p>Thanks. I'll be in touch within 24-48 hours by email or Instagram.</p>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-
-<section class="section" id="faq">
-  <div class="section-header center">
-    <div class="eyebrow">FAQ</div>
-    <h2>Common questions</h2>
-  </div>
-
-  <div class="faq-list">
-    <div class="faq-item">
-      <button type="button" class="faq-q" aria-expanded="false">Do you only film in Northern Rivers?</button>
-      <div class="faq-a">I'm based in the Northern Rivers, NSW, and shoot across Byron Bay. I travel anywhere in Australia, with travel quoted per job.</div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q" aria-expanded="false">How do the package prices work?</button>
-      <div class="faq-a">A Creator Session is A$750 at my set (A$1,050 on location) for the recording and 5 hook-first clips. A Full Episode is A$1,900 (A$2,200 on location) and adds the long-form edit, 8 clips instead of 5, a custom thumbnail, chapters and upload. A Series of 4 or more episodes is A$1,750 per episode. The monthly plan is 2 Full Episodes for A$3,300 a month. Extra clips are A$60 each.</div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q" aria-expanded="false">How do payment and cancellations work?</button>
-      <div class="faq-a">Creator Sessions are paid in full when you book. Everything else takes a 50% deposit to lock the shoot day, with the balance on delivery. You can move a shoot for free with 48 hours&rsquo; notice, and weather moves are always free.</div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q" aria-expanded="false">Do I have to film the whole pack at once?</button>
-      <div class="faq-a">No. You commit to a number of episodes, not one giant shoot. Batch-record when it helps, or space them out. The Series rate holds for the committed run.</div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q" aria-expanded="false">Do you book guests for me?</button>
-      <div class="faq-a">Not in the base package. You bring guests from your network so the show stays true to your brand. Guest outreach can be added if you want help. Prep and prompts are included once a guest is locked in.</div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q" aria-expanded="false">Can you interview me if I do not want to host?</button>
-      <div class="faq-a">Yes. I can suggest questions and prompts, and a single episode or Creator Session is enough to start.</div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q" aria-expanded="false">How fast is turnaround?</button>
-      <div class="faq-a">You get the first cut of your episode, clips and thumbnail within <span data-turnaround>7</span> days of recording. Revisions typically take 2 to 3 business days per round, and everything is ready to publish once you approve.</div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q" aria-expanded="false">Is breathwork required?</button>
-      <div class="faq-a">No. Optional, no extra charge.</div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q" aria-expanded="false">Who owns the content?</button>
-      <div class="faq-a">You do. Full ownership of the final content stays with you.</div>
-    </div>
+<section class="s-sec" id="faq">
+  <div class="s-wrap s-faq">
+    <h2>Questions</h2>
+    <details><summary>Where do you film?</summary><p>At my set, or your place within 50km of Byron Bay. Further is fine, with travel charged.</p></details>
+    <details><summary>How do I pay?</summary><p>Creator Sessions are paid in full when you book. Everything else is a 50% deposit, balance on delivery.</p></details>
+    <details><summary>How fast do I get it back?</summary><p>First cut within 7 days of recording.</p></details>
+    <details><summary>Who owns the content?</summary><p>You do. Full ownership of the final content stays with you.</p></details>
+    <details><summary>Can you interview me?</summary><p>Yes. I can host and bring the questions, so you just talk.</p></details>
   </div>
 </section>
 
@@ -1850,7 +1461,7 @@
   });
 
   const form = document.getElementById('inquireForm');
-  form.addEventListener('submit', async function(e) {
+  if (form) form.addEventListener('submit', async function(e) {
     e.preventDefault();
     const btn = form.querySelector('.submit-btn');
     const errBox = document.getElementById('formError');
