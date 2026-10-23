@@ -63,7 +63,7 @@ html { scroll-padding-top: 76px !important; }
 footer.site-footer { display: block !important; background: var(--ink) !important; border-top: 1px solid var(--hair) !important; padding: 64px 32px 32px !important; text-align: left !important; }
 .site-footer .footer-top { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1.3fr 2fr; gap: 40px; }
 .site-footer .footer-brand { align-items: flex-start !important; }
-.site-footer .footer-brand p { color: var(--muted) !important; font-size: var(--fs-xs) !important; max-width: 30ch; }
+.site-footer .footer-brand p { color: var(--muted) !important; font-size: var(--fs-xs) !important; max-width: 34ch; }
 .site-footer .footer-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; position: static; height: auto; background: none; border: 0; padding: 0; backdrop-filter: none; -webkit-backdrop-filter: none; }
 .site-footer .fcol h2 { font-family: var(--sans) !important; font-weight: 600; color: var(--muted); letter-spacing: 0.01em; margin: 0 0 8px; }
 .site-footer ul { list-style: none; margin: 0; padding: 0; }
@@ -139,7 +139,7 @@ details.reveal-more > summary:hover { background: rgba(184,134,11,0.12); }
 .hiw-steps li { border-top: 1px solid var(--hair); padding-top: 28px; }
 .hiw-n { display: block; font-family: var(--serif); font-weight: 500; font-size: 64px; line-height: 1; color: var(--gold); letter-spacing: 0.02em; margin-bottom: 18px; font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
 .hiw-steps h3 { font-size: var(--fs-xl) !important; color: #fff; margin: 0 0 10px; }
-.hiw-steps p { font-size: var(--fs-m); color: var(--muted); margin: 0; max-width: 30ch; }
+.hiw-steps p { font-size: var(--fs-m); color: var(--muted); margin: 0; max-width: 34ch; }
 .hiw-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 64px; }
 .hiw-photos picture { display: block; background: #1b1814; border-radius: 6px; overflow: hidden; aspect-ratio: 4 / 5; }
 .hiw-photos img { width: 100%; height: 100%; object-fit: cover; display: block; }
