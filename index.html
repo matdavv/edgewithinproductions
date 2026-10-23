@@ -1234,6 +1234,26 @@
   .tier .pay-chat a { color: #7a5a00; }
   .hero-alt { font-family: Arial, sans-serif; font-size: 16px; color: #d6d6d6; margin-top: 12px; text-align: center; }
   .hero-alt a { color: var(--gold); display: inline-flex; align-items: center; min-height: 44px; }
+  /* Round 2 */
+  .cal-placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; min-height: 260px; padding: 30px 20px; text-align: center; }
+  .cal-load { min-height: 48px; }
+  .cal-placeholder p { font-family: Arial, sans-serif; font-size: 17px; color: #cfcfcf; margin: 0; max-width: 420px; }
+  .cal-embed.loaded .cal-placeholder { display: none; }
+  .s-cal { min-height: 0 !important; }
+  .s-cal-loading { display: none; }
+  .hero-from { font-family: Arial, sans-serif; font-size: 16px; color: #e6e6e6; margin-top: 14px; text-align: center; }
+  .s-kicker { font-family: Arial, sans-serif; font-size: 18px; color: var(--gold); text-align: center; margin: -4px 0 28px; }
+  .s-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 22px; }
+  .s-photos img { width: 100%; height: auto; border-radius: 14px; display: block; aspect-ratio: 3 / 4; object-fit: cover; }
+  .s-about .s-about-sub { font-family: Arial, sans-serif; font-size: 18px; color: var(--gold); margin-top: 10px; }
+  .reel { list-style: none; }
+  .case { max-width: 640px; margin: 0 auto; padding: 120px 22px 60px; }
+  .case .eyebrow { text-align: center; }
+  .case h1 { font-size: clamp(34px, 6vw, 48px); text-align: center; margin: 8px 0 26px; }
+  .case .client-card h3 { font-size: 26px; }
+  .case .client-card .client-meta { font-size: 15px; }
+  .case .client-card li { font-size: 17px; }
+  .case .client-result { font-size: 17px; }
 </style>
 <script type="application/ld+json">
 {
@@ -1279,7 +1299,7 @@
     <li><a href="/" aria-current="page">Home</a></li>
     <li><a href="/creators/">Creators</a></li>
     <li><a href="/business/">Business</a></li>
-    <li><a href="https://edgewithinpodcast.com/">The Show</a></li>
+    <li><a href="https://edgewithinpodcast.com/" target="_blank" rel="noopener" aria-label="The Show (opens in a new tab)">The Show <span aria-hidden="true">&#8599;</span></a></li>
     <li><a href="https://calendly.com/mjdaavenport/podcast-production-chat" target="_blank" rel="noopener" data-booking-link class="nav-cta">Book a call</a></li>
   </ul>
 </nav>
@@ -1294,6 +1314,7 @@
       <a href="https://buy.stripe.com/28EfZadRA1NWbhYd5GgMw00" target="_blank" rel="noopener" class="btn-primary">Book &amp; pay A$750</a>
       <a href="https://calendly.com/mjdaavenport/podcast-production-chat" target="_blank" rel="noopener" data-booking-link class="btn-secondary">Book a free 30 min call</a>
     </div>
+    <p class="hero-from">From A$750 · Byron Bay &amp; Northern Rivers</p>
     <p class="pay-note">Pay now, then pick your time.</p>
     <p class="hero-alt">Filming at your place? <a href="https://buy.stripe.com/28E00c8xggIQ0Dk5DegMw01" target="_blank" rel="noopener">Book &amp; pay A$1,050 (on location)</a>. Want to chat first? <a href="#book">Book a free 30 minute call.</a></p>
     <div class="s-stats">
@@ -1311,35 +1332,35 @@
   </div>
   </div>
   <div class="reels-row" role="list">
-      <figure class="reel">
+      <figure class="reel" role="listitem">
         <div class="reel-frame">
           <video src="assets/reels/web/ocean.mp4" poster="assets/reels/ocean.webp" preload="none" playsinline controls controlslist="nodownload" width="720" height="1280" aria-label="Clip: 15 Years Living On The Ocean"></video>
           <span class="reel-views">1.5M views</span>
         </div>
         <figcaption>15 Years Living On The Ocean</figcaption>
       </figure>
-      <figure class="reel">
+      <figure class="reel" role="listitem">
         <div class="reel-frame">
           <video src="assets/reels/web/whatisforyou.mp4" poster="assets/reels/whatisforyou.webp" preload="none" playsinline controls controlslist="nodownload" width="720" height="1280" aria-label="Clip: What is for you with Billy Otto"></video>
           <span class="reel-views">1.3M views</span>
         </div>
         <figcaption><strong>Billy Otto</strong> · What Is For You</figcaption>
       </figure>
-      <figure class="reel">
+      <figure class="reel" role="listitem">
         <div class="reel-frame">
           <video src="assets/reels/web/matriarchy.mp4" poster="assets/reels/matriarchy.webp" preload="none" playsinline controls controlslist="nodownload" width="720" height="1280" aria-label="Clip: Matriarchy, from the In Bloom podcast (client)"></video>
           <span class="reel-views">75K views</span>
         </div>
         <figcaption><strong>In Bloom</strong> · Matriarchy <span class="reel-tag">Client</span></figcaption>
       </figure>
-      <figure class="reel">
+      <figure class="reel" role="listitem">
         <div class="reel-frame">
           <video src="assets/reels/web/imnotadog.mp4" poster="assets/reels/imnotadog.webp" preload="none" playsinline controls controlslist="nodownload" width="720" height="1280" aria-label="Clip: I’m Not A Dog with Montana Lower"></video>
           <span class="reel-views">212K views</span>
         </div>
         <figcaption><strong>Montana Lower</strong> · I’m Not A Dog</figcaption>
       </figure>
-      <figure class="reel">
+      <figure class="reel" role="listitem">
         <div class="reel-frame">
           <video src="assets/reels/web/mencrying.mp4" poster="assets/reels/mencrying.webp" preload="none" playsinline controls controlslist="nodownload" width="720" height="1280" aria-label="Clip: Men Crying with Tom Horne"></video>
           <span class="reel-views">130K views</span>
@@ -1352,7 +1373,8 @@
 
 <section class="s-sec" id="paths">
   <div class="s-wrap">
-    <h2>Choose your path</h2>
+    <h2>Video podcast production in Byron Bay</h2>
+    <p class="s-kicker">Choose your path</p>
     <div class="s-paths">
       <a class="s-card" href="/creators/">
         <h3>Creators</h3>
@@ -1378,13 +1400,18 @@
       <li><b>I edit</b>Full episode and hook-first clips, colour graded.</li>
       <li><b>You post</b>First cut back within <span data-turnaround>7</span> days.</li>
     </ol>
+    <div class="s-photos">
+      <picture><source type="image/webp" srcset="assets/img/garden-shoot-480.webp 480w, assets/img/garden-shoot-800.webp 800w" sizes="(max-width: 760px) 50vw, 500px"><img src="assets/img/garden-shoot.jpg" width="1050" height="1400" loading="lazy" decoding="async" alt="Two people recording a podcast at an outdoor table in a garden, lit by two softbox lights"></picture>
+      <picture><source type="image/webp" srcset="assets/img/deck-setup-480.webp 480w, assets/img/deck-setup-800.webp 800w" sizes="(max-width: 760px) 50vw, 500px"><img src="assets/img/deck-setup.jpg" width="1050" height="1400" loading="lazy" decoding="async" alt="Podcast set on a covered timber deck with cameras on tripods and a round softbox light"></picture>
+    </div>
   </div>
 </section>
 
 <section class="s-sec" id="about">
   <div class="s-wrap s-about">
     <picture><source srcset="assets/img/mat-portrait.webp" type="image/webp"><img src="assets/img/mat-portrait.jpg" alt="Mat Davenport" width="220" height="220" loading="lazy" decoding="async"></picture>
-    <p>Hi, I'm Mat. I host the Edge Within podcast and bring a full studio to you, so you can just talk.</p>
+    <div><p>Hi, I'm Mat. I host the Edge Within podcast and bring a full studio to you, so you can just talk.</p>
+    <p class="s-about-sub">Edge Within is my podcast. Edge Within Productions makes yours.</p></div>
   </div>
 </section>
 
@@ -1394,7 +1421,7 @@
     <div class="s-quotes">
       <figure class="s-quote">
         <blockquote>&ldquo;Working with Mat has given me the support and guidance I have needed to bring a dream to life. He was respectful and inspiring of my unique vision and made me feel more confident. Eternally grateful and keen to continue creating together!&rdquo;</blockquote>
-        <figcaption>Montana Lower, host of In Bloom (Inbluem)</figcaption>
+        <figcaption>Montana Lower, founder of Inbluem and host of In Bloom</figcaption>
       </figure>
       <figure class="s-quote">
         <blockquote>&ldquo;Mat has supported and co-created at two of my house concerts and set up a mini podcast room during the night's festivities. He brings everything: his gear, his lighting, his whole setup. … He offers a few tiered options that fit my budget easily, and honestly, for the value he provides, it was the easiest yes I've made.&rdquo;</blockquote>
@@ -1414,8 +1441,10 @@
         <p>Opens Calendly in a new tab. Free 30 minute call.</p>
       </div>
     <div class="cal-embed s-cal">
-      <p class="s-cal-loading">Loading calendar...</p>
-      <iframe src="https://calendly.com/mjdaavenport/podcast-production-chat?hide_gdpr_banner=1&amp;background_color=141414&amp;text_color=f0f0f0&amp;primary_color=b8860b" title="Book a time with Mat on Calendly" loading="lazy"></iframe>
+      <div class="cal-placeholder">
+          <p>See Mat's open times for a free 30 minute call. The calendar loads from Calendly when you press the button.</p>
+          <button type="button" class="btn-primary cal-load" data-cal-src="https://calendly.com/mjdaavenport/podcast-production-chat?hide_gdpr_banner=1&amp;background_color=141414&amp;text_color=f0f0f0&amp;primary_color=b8860b">Show available times</button>
+        </div>
     </div>
     <p class="s-cal-fallback">Calendar not showing? <a href="https://calendly.com/mjdaavenport/podcast-production-chat" target="_blank" rel="noopener">Open it in Calendly</a>.</p>
     <div class="dm-row">
@@ -1444,7 +1473,7 @@
     <p>© 2026 Edge Within with Mat Davenport</p>
   </div>
   <p>
-    <a href="https://edgewithinpodcast.com/">The Show</a> ·
+    <a href="https://edgewithinpodcast.com/" target="_blank" rel="noopener" aria-label="The Show (opens in a new tab)">The Show <span aria-hidden="true">&#8599;</span></a> ·
     <a href="https://edgewithinpodcast.com/partners/">Partners</a> ·
     <a href="https://edgewithinpodcast.com/media-kit/">Sponsor</a> ·
     <a href="mailto:mat@edgewithinproductions.com?subject=Guest%20enquiry">Be a Guest</a> ·
@@ -1630,6 +1659,16 @@
     const io = new IntersectionObserver(es => es.forEach(e => { if (!e.isIntersecting) e.target.pause(); }), { threshold: 0.2 });
     document.querySelectorAll('.reel video').forEach(v => io.observe(v));
   }
+</script>
+<script>
+  // Calendly loads only after a click, so no Calendly requests or cookies on page open.
+  document.querySelectorAll('.cal-load').forEach(btn => btn.addEventListener('click', () => {
+    const box = btn.closest('.cal-embed');
+    const f = document.createElement('iframe');
+    f.src = btn.dataset.calSrc; f.title = 'Book a time with Mat on Calendly';
+    f.style.cssText = 'display:block;width:100%;height:' + (innerWidth < 600 ? 820 : 700) + 'px;border:0';
+    box.appendChild(f); box.classList.add('loaded'); f.focus();
+  }));
 </script>
 </body>
 </html>

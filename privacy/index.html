@@ -1161,9 +1161,30 @@
   .form-card .cal-mobile p { color: #555; }
   .wordmark { min-height: 44px; justify-content: center; }
   .proof-strip a, .form-dm a { display: inline-flex; align-items: center; min-height: 44px; }
+  /* Round 2 */
+  .cal-placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; min-height: 260px; padding: 30px 20px; text-align: center; }
+  .cal-load { min-height: 48px; }
+  .cal-placeholder p { font-family: Arial, sans-serif; font-size: 17px; color: #cfcfcf; margin: 0; max-width: 420px; }
+  .cal-embed.loaded .cal-placeholder { display: none; }
+  .s-cal { min-height: 0 !important; }
+  .s-cal-loading { display: none; }
+  .hero-from { font-family: Arial, sans-serif; font-size: 16px; color: #e6e6e6; margin-top: 14px; text-align: center; }
+  .s-kicker { font-family: Arial, sans-serif; font-size: 18px; color: var(--gold); text-align: center; margin: -4px 0 28px; }
+  .s-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 22px; }
+  .s-photos img { width: 100%; height: auto; border-radius: 14px; display: block; aspect-ratio: 3 / 4; object-fit: cover; }
+  .s-about-sub { font-family: Arial, sans-serif; font-size: 18px; color: var(--gold); margin-top: 10px; }
+  .reel { list-style: none; }
+  .case { max-width: 640px; margin: 0 auto; padding: 120px 22px 60px; }
+  .case .eyebrow { text-align: center; }
+  .case h1 { font-size: clamp(34px, 6vw, 48px); text-align: center; margin: 8px 0 26px; }
+  .case .client-card h3 { font-size: 26px; }
+  .case .client-card .client-meta { font-size: 15px; }
+  .case .client-card li { font-size: 17px; }
+  .case .client-result { font-size: 17px; }
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <nav aria-label="Main">
   <a href="/" class="wordmark" aria-label="Edge Within Productions, home" translate="no"><span class="wm-word" aria-hidden="true"><span class="wm-edge">EDGE</span><span class="wm-within">WITHIN</span></span><span class="wm-sub" aria-hidden="true">PRODUCTIONS</span></a>
   <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
@@ -1173,7 +1194,7 @@
     <li><a href="/">Home</a></li>
     <li><a href="/creators/">Creators</a></li>
     <li><a href="/business/">Business</a></li>
-    <li><a href="https://edgewithinpodcast.com/">The Show</a></li>
+    <li><a href="https://edgewithinpodcast.com/" target="_blank" rel="noopener" aria-label="The Show (opens in a new tab)">The Show <span aria-hidden="true">&#8599;</span></a></li>
     <li><a href="https://calendly.com/mjdaavenport/podcast-production-chat" target="_blank" rel="noopener" data-booking-link class="nav-cta">Book a call</a></li>
   </ul>
 </nav>
