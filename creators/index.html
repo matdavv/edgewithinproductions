@@ -1199,6 +1199,10 @@
   .pay-note a { color: var(--gold); display: inline-flex; align-items: center; min-height: 44px; }
   .tier .pay-note a { color: #6b4f00; }
   @media (max-width: 600px) { .pay-pair { grid-template-columns: 1fr; } }
+  .addons-more { margin-top: 14px; }
+  .addons-more summary { cursor: pointer; font-family: Arial, sans-serif; font-size: 16px; font-weight: 700; color: var(--gold); min-height: 44px; display: flex; align-items: center; }
+  .cal-fallback-small { font-family: Arial, sans-serif; font-size: 14px; text-align: center; margin-top: 10px; color: #555; }
+  .cal-fallback-small a { color: #6b4f00; }
 </style>
 </head>
 <body>
@@ -1234,7 +1238,6 @@
     </div>
     <p class="pay-note">Pay now, then pick your time. Want to chat first? <a href="#book">Book a free 30 minute call.</a></p>
     <div class="pill lp-hero-offer">Creator Session A$750 · A$1,050 on location<span class="pill-loc">Byron Bay &amp; Northern Rivers</span></div>
-    <p class="hero-proof">21 episodes shipped · 3.7M Reels views in 90 days · $0 on ads</p>
   </div>
 <div class="testimonial-pair">
   <!-- Testimonial: Montana Lower (InBluem), approved by Mat 29 Sep 2026. -->
@@ -1333,13 +1336,6 @@
       </figure>
       <figure class="reel" role="listitem">
         <div class="reel-frame">
-          <video src="/assets/reels/web/bondishooting.mp4" poster="/assets/reels/bondishooting.webp" preload="none" playsinline controls controlslist="nodownload" width="720" height="1280" aria-label="Clip: “I walked towards the Bondi shooting.” with Heath Jones"></video>
-          <span class="reel-views">56K views</span>
-        </div>
-        <figcaption><strong>Heath Jones</strong> · Bondi Shooting</figcaption>
-      </figure>
-      <figure class="reel" role="listitem">
-        <div class="reel-frame">
           <video src="/assets/reels/web/mencrying.mp4" poster="/assets/reels/mencrying.webp" preload="none" playsinline controls controlslist="nodownload" width="720" height="1280" aria-label="Clip: Men Crying with Tom Horne"></video>
           <span class="reel-views">130K views</span>
         </div>
@@ -1354,7 +1350,7 @@
   <div class="section-inner">
     <div class="section-header center">
       <div class="eyebrow">For creators</div>
-      <h2>One morning. 5 ready-to-post clips.</h2>
+      <h2>Pick your package</h2>
       <p>Start with a Creator Session. Upgrade to a Full Episode when you want the long-form show too.</p>
     </div>
     <div class="pricing-grid">
@@ -1365,7 +1361,7 @@
         <div class="tier-period">at my set · A$1,050 on location</div>
         <div class="tier-total">One morning, 5 ready-to-post clips</div>
         <ul class="tier-list">
-          <li>One-hour recording, two matched 4K cameras and premium mics</li>
+          <li>About an hour of recording, two matched 4K cameras and premium mics</li>
           <li>Prepared questions and hook coaching before we roll</li>
           <li>Optional breathwork to settle in before recording</li>
           <li>5 hook-first vertical clips with captions and music</li>
@@ -1402,15 +1398,20 @@
       <ul class="addons-list">
         <li><strong>Extra clips</strong>Each clip is cut with the same care and finish as the Edge Within clips. Extra clips are A$60 each.</li>
         <li><strong>Cinematic clips</strong>Everything a standard clip has, plus extra flair: bolder animated text, sharper pacing and more punch. A$75 per clip, or add A$25 to upgrade any included clip.</li>
-        <li><strong>Episode trailer</strong>A short trailer to launch or promote the episode. A$100.</li>
-        <li><strong>New show setup</strong>A$250 one-off. I set up your Spotify and Apple Podcasts listings. You supply logins and show details up front.</li>
         <li><strong>Raw files</strong>All camera and audio files from your shoot, alongside any package. A$150.</li>
-        <li><strong>Paid ad usage</strong>Organic use on your own channels is always included. Running the content as paid ads adds 25%. Included with a Series, the monthly plan and production days.</li>
-        <li><strong>Extra revisions or extra work</strong>Revision rounds beyond those included, or any work outside the agreed scope. A$125 an hour.</li>
-        <li><strong>Travel</strong>On location means within 50km of Byron Bay. Beyond that I travel anywhere in Australia, with travel quoted per job.</li>
-        <li><strong>Guest outreach</strong>Optional support if you want help booking.</li>
-        <li><strong>Social posting</strong>I can post your finished clips for you during release week.</li>
       </ul>
+      <details class="addons-more">
+        <summary>More options</summary>
+        <ul class="addons-list">
+          <li><strong>Episode trailer</strong>A short trailer to launch or promote the episode. A$100.</li>
+          <li><strong>New show setup</strong>A$250 one-off. I set up your Spotify and Apple Podcasts listings. You supply logins and show details up front.</li>
+          <li><strong>Paid ad usage</strong>Organic use on your own channels is always included. Running the content as paid ads adds 25%. Included with a Series, the monthly plan and production days.</li>
+          <li><strong>Extra revisions or extra work</strong>Revision rounds beyond those included, or any work outside the agreed scope. A$125 an hour.</li>
+          <li><strong>Travel</strong>On location means within 50km of Byron Bay. Beyond that I travel anywhere in Australia, with travel quoted per job.</li>
+          <li><strong>Guest outreach</strong>Optional support if you want help booking.</li>
+          <li><strong>Social posting</strong>I can post your finished clips for you during release week.</li>
+        </ul>
+      </details>
     </div>
   </div>
 </section>
@@ -1429,7 +1430,6 @@
           <h3>Book a 30-minute call</h3>
           <p>No pitch. We talk through your idea and see if we're a good fit for each other. I don't take on every project, and if it's not right, you've lost nothing.</p>
         </div>
-        <a id="bookingLink" class="btn-secondary" href="https://calendly.com/mjdaavenport/podcast-production-chat" target="_blank" rel="noopener" data-booking-link>Open in Calendly</a>
       </div>
       <div class="cal-mobile">
         <a class="btn-primary" href="https://calendly.com/mjdaavenport/podcast-production-chat" target="_blank" rel="noopener">Pick a time</a>
@@ -1542,10 +1542,6 @@
     <div class="faq-item">
       <button type="button" class="faq-q" aria-expanded="false">How do payment and cancellations work?</button>
       <div class="faq-a">Creator Sessions are paid upfront. Bigger packages take a 50% deposit, with the balance on delivery. You get one free reschedule with 48 hours&rsquo; notice, and weather moves are always free. Full details are in the <a href="/terms/">terms</a>.</div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q" aria-expanded="false">Do I have to film the whole pack at once?</button>
-      <div class="faq-a">No. You commit to a number of episodes, not one giant shoot. Batch-record when it helps, or space them out. The Series rate holds for the committed run.</div>
     </div>
     <div class="faq-item">
       <button type="button" class="faq-q" aria-expanded="false">Do you book guests for me?</button>
@@ -1767,7 +1763,7 @@
     const f = document.createElement('iframe');
     f.src = btn.dataset.calSrc; f.title = 'Book a time with Mat on Calendly';
     f.style.cssText = 'display:block;width:100%;height:' + (innerWidth < 600 ? 820 : 700) + 'px;border:0';
-    box.appendChild(f); box.classList.add('loaded'); f.focus();
+    box.appendChild(f); box.classList.add('loaded'); const fb = document.createElement('p'); fb.className = 'cal-fallback-small'; fb.innerHTML = 'Calendar not loading? <a href="https://calendly.com/mjdaavenport/podcast-production-chat" target="_blank" rel="noopener">Open it in Calendly</a>.'; box.after(fb); f.focus();
   }));
 </script>
 </body>
