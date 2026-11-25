@@ -1291,6 +1291,15 @@
   .testimonial-card .case-link--card { margin-top: 12px; }
   @media (max-width: 860px) { .testimonial-card, .s-quote { height: auto; } .testimonial-card blockquote, .s-quote blockquote { font-size: 18px !important; } }
   .hero-call-note { margin: 12px 0 0; font-size: 14px; line-height: 1.5; opacity: .8; max-width: 420px; }
+  /* Video testimonial (Nov 2026): InBluem, Montana Lower and Cooper */
+  .s-vquote { margin: 0 auto 22px; max-width: 900px; }
+  .s-vquote-line { font-family: var(--serif); font-size: 26px; line-height: 1.4; text-align: center; margin: 0 0 16px; }
+  .s-vquote-line::before { content: '\201C'; color: var(--gold); }
+  .s-vquote-line::after { content: '\201D'; color: var(--gold); }
+  .s-vquote-frame { position: relative; aspect-ratio: 16 / 9; border-radius: 10px; overflow: hidden; border: 1px solid rgba(184,134,11,0.35); background: #000; }
+  .s-vquote-frame video { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .s-vquote figcaption { text-align: center; margin-top: 12px; display: flex; flex-direction: column; gap: 2px; }
+  @media (max-width: 860px) { .s-vquote-line { font-size: 20px; } }
 </style>
 <script type="application/ld+json">
 {
@@ -1459,6 +1468,14 @@
 <section class="s-sec" id="clients">
   <div class="s-wrap">
     <h2>What clients say</h2>
+    <!-- Video testimonial: Montana Lower and Cooper (InBluem), recorded 4 Nov 2026. Slot more video testimonials here as they come in. -->
+    <figure class="s-vquote">
+      <p class="s-vquote-line">I didn't have time to do a podcast before. I always have time for Mat.</p>
+      <div class="s-vquote-frame">
+        <video src="assets/testimonials/inbluem-montana-cooper.mp4" poster="assets/testimonials/inbluem-montana-cooper.webp" preload="none" playsinline controls controlslist="nodownload" width="1920" height="1080" aria-label="Video testimonial from Montana Lower and Cooper of InBluem, with captions"></video>
+      </div>
+      <figcaption><span class="t-name">Montana Lower and Cooper</span><span class="t-role">InBluem</span></figcaption>
+    </figure>
     <div class="s-quotes">
       <figure class="s-quote">
         <blockquote>&ldquo;Working with Mat has given me the support and guidance I have needed to bring a dream to life. He was respectful and inspiring of my unique vision and made me feel more confident. Eternally grateful and keen to continue creating together!&rdquo;</blockquote>
